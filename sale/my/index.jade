@@ -28,4 +28,5 @@ html(amp, lang="en")
   body
     amp-list(width="auto", height="140", layout="fixed-height", src="https://api.myjson.com/bins/x317h")
       template(type="amp-mustache")
-        .image-entry {{title}}
+        .image-entry
+          amp-img(src="{{img}}", alt="{{title}}", width="360", height="260", layout="responsive")
