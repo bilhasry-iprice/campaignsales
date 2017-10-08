@@ -58,3 +58,24 @@ input, textarea {
     margin-bottom: 25px;
 }
 
+.list-overflow {
+    position: absolute !important;
+    bottom: 5px;
+    text-align:center;
+    width: 100%;
+    text-align: center;
+}
+
+.list-overflow button{
+    border: 0px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Noto Sans', sans-serif;
+    background: #36c4d1;
+    padding: 8px 35px;
+    -webkit-box-shadow: 0px 1px 4px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 1px 4px rgba(0,0,0,0.2);
+    box-shadow: 0px 1px 4px rgba(0,0,0,0.2);
+}
+
