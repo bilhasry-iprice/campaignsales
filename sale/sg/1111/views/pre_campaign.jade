@@ -1,0 +1,21 @@
+#countdown.width-100
+  .countdown-timer
+    h2.slideInDown 11/11 Sale
+    amp-iframe(width="560", height="240", src="https://bilhasry-iprice.github.io/countdowntimer/", sandbox="allow-scripts allow-same-origin", layout="responsive")
+      amp-img(srcset="assets/img/transparent.png", width="1369", height="457", layout="fill", placeholder)
+    h3.slideInDown The biggest sale of the year is coming soon!
+#subscribe-form
+  .subscribe-form-content.row
+    .col-md-6.big-highlight
+      amp-img(width="547", height="420", layout="responsive", src="assets/img/banner-90.jpg")
+    .col-md-6.subscribe-now
+      h4 Get ready for the 11/11 Sale. Don't miss out on the best deals and coupons. Subscribe below!
+      #mc_embed_signup
+        form#mc-embedded-subscribe-form.validate(action-xhr="//iprice.us8.list-manage.com/subscribe/post?u=324d1f42da403cc125e4ac5e1&amp;id=94b723e79d", method="POST",name="mc-embedded-subscribe-form",target="_blank" , novalidate)
+          #mc_embed_signup_scroll
+            input#mce-EMAIL.email(type="email", name="EMAIL", placeholder="your.email.address@email.com", required, onfocus="this.placeholder = ''", onblur="this.placeholder = 'your.email.address@email.com'" )
+            label Email Address
+            div.hidden(aria-hidden="true")
+              input(type="text",name="b_324d1f42da403cc125e4ac5e1_94b723e79d" ,tabindex="-1")
+            div.clear
+              input#mc-embedded-subscribe.button(type="submit" value="Subscribe" name="subscribe")
