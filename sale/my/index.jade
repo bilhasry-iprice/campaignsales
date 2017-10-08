@@ -29,8 +29,9 @@ html(amp, lang="en")
       include assets/css/bootstrap.min.css
       include assets/css/main.min.css
   body
-    amp-list.row(width="1024", height="260", layout="flex-item", src="https://bilhasry-iprice.github.io/sale/data/my/data_sale.json")
+    amp-list.row(width="1024", height="250", layout="flex-item", src="https://bilhasry-iprice.github.io/sale/data/my/data_sale.json")
       template(type="amp-mustache")
         .image-entry.col-md-4
           a(href="{{url}}")
             amp-img(src="{{img}}", alt="{{title}}", width="360", height="260", layout="responsive")
+      div.list-overflow(overflow) Load More
