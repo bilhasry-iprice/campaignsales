@@ -15,7 +15,7 @@ html(amp, lang="en")
         "@context": "http://schema.org",
         "@type": "NewsArticle",
         "headline": "Sale on iPriceGroup Malaysia",
-        "descriptions" : "Single’s Day sales is here! Get all your favourite products on discounts!",
+        "descriptions" : "Single Day sales is here! Get all your favourite products on discounts!",
         "datePublished": "2015-10-07T12:02:41Z",
         "image": [
           "logo.jpg"
@@ -37,11 +37,11 @@ html(amp, lang="en")
             p Get ready to do all your year’s shopping starting from 1st November 2017. Known as Singles’ Day, 11-11 is a day created for those who would rather shop online than do anything else. The sale starts on 1st November and goes on until 13rd November! Thanks to the amazing discounts from the best merchants in Malaysia, you get rebates and huge promotions on all your favourite items and services. 
       #brand-list
         .brand-list.row.content-block
-          amp-list(width="1024", height="260", layout="responsive", src="https://api.myjson.com/bins/x317h")
+          amp-list(width="1024", height="260", layout="fixed-height", src="https://api.myjson.com/bins/x317h")
             template(type="amp-mustache")
               .brand-item.col-md-4
                 a
-                  amp-img(src="{{url}}", width="360", title="{{title}}",height="260", layout="responsive")
+                  amp-img(src="{{url}}", width="360", alt="{{title}}",height="260", layout="responsive")
     
 
 
