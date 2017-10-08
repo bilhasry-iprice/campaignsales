@@ -39,9 +39,7 @@ html(amp, lang="en")
         .brand-list.row.content-block
           amp-list(width="auto", height="260", layout="fixed-height", src="https://api.myjson.com/bins/dzolx")
             template(type="amp-mustache")
-              .brand-item.col-md-4
-                a
-                  amp-img(src="{{img}}", width="360", alt="{{title}}",height="260", layout="responsive")
+              .image-entry {{title}}
     
 
 
