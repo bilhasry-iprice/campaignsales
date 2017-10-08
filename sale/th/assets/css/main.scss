@@ -5,7 +5,7 @@ $color-green 	: #0DA290;
 $color-grey 	: #EAEAEA;
 
 body{
-	font-family: 'Noto Sans', sans-serif;	
+	font-family: 'Noto Sans', "Noto Sans Thai", sans-serif;	
 	margin: 0px;
 	padding: 0 px;
 	-webkit-font-smoothing: antialiased;
@@ -21,6 +21,7 @@ body{
 	font-style: normal;
 }
 
+@font-face{font-family:'Noto Sans Thai';font-style:normal;font-weight:400;src:url(//fonts.gstatic.com/ea/notosansthai/v3/NotoSansThai-Regular.eot);src:url(//fonts.gstatic.com/ea/notosansthai/v3/NotoSansThai-Regular.eot?#iefix) format("embedded-opentype"),url(//fonts.gstatic.com/ea/notosansthai/v3/NotoSansThai-Regular.woff2) format("woff2"),url(//fonts.gstatic.com/ea/notosansthai/v3/NotoSansThai-Regular.woff) format("woff"),url(//fonts.gstatic.com/ea/notosansthai/v3/NotoSansThai-Regular.ttf) format("truetype")}@font-face{font-family:'Noto Sans Thai';font-style:normal;font-weight:700;src:url(//fonts.gstatic.com/ea/notosansthai/v3/NotoSansThai-Bold.eot);src:url(//fonts.gstatic.com/ea/notosansthai/v3/NotoSansThai-Bold.eot?#iefix) format("embedded-opentype"),url(//fonts.gstatic.com/ea/notosansthai/v3/NotoSansThai-Bold.woff2) format("woff2"),url(//fonts.gstatic.com/ea/notosansthai/v3/NotoSansThai-Bold.woff) format("woff"),url(//fonts.gstatic.com/ea/notosansthai/v3/NotoSansThai-Bold.ttf) format("truetype")} 
 
 *, .border-box, :after, :before {
     -o-box-sizing: border-box;
@@ -71,7 +72,7 @@ input, textarea {
     cursor: pointer;
     color: #fff;
     font-weight: bold;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans', 'Noto Sans Thai' sans-serif;
     background: #36c4d1;
     padding: 8px 35px;
     -webkit-box-shadow: 0px 1px 4px rgba(0,0,0,0.2);
