@@ -55,7 +55,7 @@ input, textarea {
 	padding: 0px;
 }
 
-h3{
+h2{
 	@extend .heading-typography;
 	font-size: 36px;
 	color: $color-blue;
@@ -204,12 +204,108 @@ p, ul li, li{
 		}
 	}
 }
+.top-store-content{
+    padding: 75px 0px;
+    h4{
+	    font-size: 24px;
+	    width:100%;
+	    max-width: 640px;
+	    margin: 0px auto;
+	    margin-bottom: 50px;
+	}
+}
 
+.top-store-list{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0px auto;
+	.image-entry {
+	    max-width: 250px;
+	    width: calc(100%/4);
+	    float:left;
+	    display: block;
+	    max-height:135px;
+	    margin-bottom: 15px;
+	    a{
+		    display: block;
+		    width: 100%;
+		    height: 125px;
+		    padding: 15px;
+		    text-align:center;
+		    text-decoration: none;
+		    amp-img{
+			    border: 1px solid #efefef;
+			    display: block;
+			    width: 100%;
+			    max-width: 250px;
+			}
+			h4{
+				font-size: 16px;
+				font-weight: lighter;
+				margin-bottom: 10px;
+			}
+		}
+	    
+	}
+}
+
+.coupon-link{
+    padding-top:35px;
+    text-align:center;
+    text-decoration: none;
+    background: #fff;
+}
+.coupon-link amp-img{
+    max-width:200px;
+    margin: 0px auto;
+}
+
+.coupon-link span{
+    color: #086a87;
+    padding: 0px 50px 0px 50px;
+    display:block;
+    word-wrap: break-word;
+
+}
+
+.list-overflow {
+    position: absolute !important;
+    bottom: 0px;
+    background: #fff;
+    text-align:center;
+    width: 100%;
+    text-align: center;
+}
+
+.list-overflow button{
+    border: 0px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Noto Sans', sans-serif;
+    background: #36c4d1;
+    padding: 8px 35px;
+    -webkit-box-shadow: 0px 1px 4px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 1px 4px rgba(0,0,0,0.2);
+    box-shadow: 0px 1px 4px rgba(0,0,0,0.2);
+}
 
 @media screen and (max-width: 640px){
 	
 	.col-4{
 		width: 100%;
+	}
+
+	.top-store-list{
+	    width: 100%;
+		.image-entry {
+			max-width: 160px;
+	    	width: calc(100%/2);
+	    	float:left;
+		    display: block;
+		    margin: 0px auto;
+		    max-height:135px;
+		}
 	}
 
 	#countdown{
@@ -219,16 +315,39 @@ p, ul li, li{
 		    width: 100%;
 		    min-height: 560px;
 		    padding: 0px 15px;
-		    h2 {
+		    h1 {
 			    padding: 110px 0px 0px 0px;
 			    font-size: 56px;
 			}
-			h3{
+			h2{
 				font-size: 16px;
 				bottom: 15px;
 				line-height:24px;
 			}
 		}
+	}
+
+	.subscribe-form-content {
+	    padding:0px;
+	    margin: 0px;
+	}
+
+	.col-md-6{
+	    width:100%;
+	    margin : 0px;
+	}
+
+	.col-md-6.big-highlight {
+	    order:2;
+	}
+
+	.col-md-6.subscribe-now{
+	    float:right !important;
+	}
+
+	.image-entry a amp-image{
+	    height: 70px;
+	    width: 100%;
 	}
 	#sup-section{
 		.sup-item{
@@ -241,6 +360,11 @@ p, ul li, li{
 		    padding: 20px 0px 30px 0px;
 		}
 	}
+
+	.top-store-content{
+		padding-right: 20px;
+		padding-left: 20px;
+	}
 }
 @media screen and (min-width:1024px)
 {
@@ -252,11 +376,12 @@ p, ul li, li{
 		background: url(./assets/img/11sale.svg) no-repeat;
 		background-size: 100%;
 		.countdown-timer{
-		    h2 {
+		    h1 {
 			    padding: 20px 0px 0px 0px;
 			    font-size: 96px;
+			    margin: 0px;
 			}
-			h3{
+			h2{
 			    font-size: 28px;
 			    line-height: 40px;
 			    bottom: 45px;
@@ -267,78 +392,14 @@ p, ul li, li{
 	.subscribe-now {
 		padding: 0px 50px;
 		h4{
-		    padding: 95px 0px 50px 0px;
+		    padding: 35px 0px 25px 0px;
 
 		}
 	}
 }
 
-#courtesies-banner{
-	position: relative;
-    background: linear-gradient(270deg,#15899d 0,#30cccd 100%);
-    width: 100%;
-    display: block;
-    @extend .menu-inline;
-}
 
-#header{
-	background: linear-gradient(270deg,#15899d 0,#30cccd 100%);
-	width: 100%;
-	display: block;
-	#banner{
-		height: 60px;
-		padding: 0 5px;
-		margin: 0px;
-		.wrapper{
-			height:100%;
-			.logo{
-				background-image: url(https://d1vfs9f7h1rfk4.cloudfront.net/assets/my/trends-logo-header.png);
-				margin-left: 10px;
-				width: 118px;
-			    height: 36px;
-			    background-size: 118px 36px;
-			    background-repeat: no-repeat;
-			    display: block;
-			    margin-top: 6px;
-			}
-			.motto{
-				margin-left: 20px;
-			    font-size: 24px;
-			    line-height: 30px;
-			    font-weight: 400;
-			    display: block;
-			    color: #fff;
-			    margin-top: 6px;
-			}
-			form{
-				position: relative;
-				margin-left: 20px;
-				-webkit-box-sizing: border-box;
-				box-sizing: border-box;
-				input{
-					width: 100%;
-					max-width: 700px;
-				    font-size: 16px;
-				    line-height: 22px;
-				    padding: 10px;
-				    padding-right: 40px;
 
-				}
-				button{
-				    position: absolute;
-				    right: 10px;
-				    background: none;
-				    height: 40px;
-				    border:none;
-				    .icon{
-				    	-webkit-transform: scale(0.8);
-				    	transform: scale(0.8);
-				    }
-				}
-			}
-		}
-	}
-}
 #main-content{
 	margin: 0px auto;
 	width: 100%;
@@ -355,7 +416,7 @@ p, ul li, li{
 		    margin: 0px auto;
 		    position: relative;
 		    display: block;
-		    h2 {
+		    h1 {
 			    margin: 0px;
 			    text-align: center;
 			    color: #fff;
@@ -365,7 +426,7 @@ p, ul li, li{
 				width:100%;
 				max-height:240px;
 			}
-			h3{
+			h2{
 				color: #fff;
 			    font-weight: normal;
 			    text-align: center;
@@ -402,6 +463,10 @@ p, ul li, li{
 		    padding: 0px 20px;
 		    .big-highlight{
 				padding: 0px;
+				background: url(./assets/img/linedpaper.png); 
+				.i-amphtml-slide-item.i-amphtml-slide-item-show{
+				    padding: 25px;
+				}
 			}
 			.subscribe-now {
 			    background: #33CCCC;
@@ -490,6 +555,15 @@ p, ul li, li{
 		.heading-content{
 			@extend .content-block;	
 			margin-top: 35px;
+			h3 {
+			    font-size: 32px;
+			    width:100%;
+			    max-width: 640px;
+			    margin: 0px auto;
+			    margin-bottom: 50px;
+			    text-align:center;
+			    color: $color-blue;
+			}
 		}
 		.sup-content.row {
 		    @extend .content-block;	
@@ -571,105 +645,5 @@ p, ul li, li{
 		}
 	}
 }
-#footer{
-	#links{
-		padding: 40px 0;
-		background: url(https://d1vfs9f7h1rfk4.cloudfront.net/build//images/logos/logo-crop-3630768420.png) no-repeat left bottom #3cc;
-		.wrapper{
-			@extend .wrapper;
-		}
-		.cs-wrapper{
-			padding: 0 30px 0;
-			padding-left: 147px;
-			.wrapper{
-				padding: 0 6rem;
-				div{
-					padding-bottom: 0;
-					width: 33.33%;
-					float:left;
-					h3{
-						margin-bottom: 10px;
-					    color: #fff;
-					    font-weight: 400;
-					    text-align:left;
-					    font-size: 14px;
-					}
-					ul
-					{
-						list-style:none;
-						margin: 0px;
-						margin-bottom: 5px;
-						padding: 0px;
-						li{
-							height: 30px;
-							list-style:none;
-							a{
-								color: #fff;
-								text-decoration: none;
-								font-size: 14px;
-								.icon{
-									display: inline-block;
-								    vertical-align: middle;
-								    margin-top: -2px;
-								    width: 18px;
-								    height: 18px;
-								    padding-right: 10px;
-								    background-repeat: no-repeat;
-								}
-								.icon-singapore{
-									background: url(https://d1vfs9f7h1rfk4.cloudfront.net/build//images/sprites/common/global-icons-2x-7552b51f7d.png) 0 0/28px 591px;
-								}
-								.icon-indonesia{
-									background: url(https://d1vfs9f7h1rfk4.cloudfront.net/build//images/sprites/common/global-icons-2x-7552b51f7d.png) 0 -171px/28px 591px;
-								}
-								.icon-philippines{
-									background: url(https://d1vfs9f7h1rfk4.cloudfront.net/build//images/sprites/common/global-icons-2x-7552b51f7d.png) 0 -133px/28px 591px;
-								}
-								.icon-hong-kong{
-									background: url(https://d1vfs9f7h1rfk4.cloudfront.net/build//images/sprites/common/global-icons-2x-7552b51f7d.png) 0 -152px/28px 591px;
-								}
-								.icon-thailand{
-									background: url(https://d1vfs9f7h1rfk4.cloudfront.net/build//images/sprites/common/global-icons-2x-7552b51f7d.png) 0 -114px/28px 591px;
-								}
-								.icon-vietnam{
-									background: url(https://d1vfs9f7h1rfk4.cloudfront.net/build//images/sprites/common/global-icons-2x-7552b51f7d.png) 0 -95px/28px 591px;
-								}
-								.icon-facebook{
-									background: url(https://d1vfs9f7h1rfk4.cloudfront.net/build//images/sprites/common/global-icons-2x-7552b51f7d.png) 0 -76px/28px 591px;
-								}
-								.icon-pinterest{
-									background: url(https://d1vfs9f7h1rfk4.cloudfront.net/build//images/sprites/common/global-icons-2x-7552b51f7d.png) 0 -38px/28px 591px;
-								}
-								.icon-twitter{
-									background: url(https://d1vfs9f7h1rfk4.cloudfront.net/build//images/sprites/common/global-icons-2x-7552b51f7d.png) 0 -19px/28px 591px;
-								}
-								.icon-google-plus{
-									background: url(https://d1vfs9f7h1rfk4.cloudfront.net/build//images/sprites/common/global-icons-2x-7552b51f7d.png) 0 -57px/28px 591px;
-								}
-							}
 
-						}
-					}
-				}
-			}
-		}
-	}
-	#disclaimer{
-		padding: 20px 10px;
-		background: #f2f2f2;
-		.wrapper{
-			@extend .wrapper;
-			.flex-column{
-				small,p{
-					padding-bottom: 5px;
-					font-size: 11px;
-					margin-left: 147px;
-				}
-			}
-		}
-		.en-my{
-			background: url(https://d1vfs9f7h1rfk4.cloudfront.net/build//images/logos/logo-footer_en-73b3f48e73.png) no-repeat 0 0/127px 38px;
-		}
-	}
-}
 

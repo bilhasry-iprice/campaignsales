@@ -1,15 +1,18 @@
 #countdown.width-100
   .countdown-timer
-    h2.slideInDown 11/11 Sale
+    h1.slideInDown 11/11 Sale
     amp-iframe(width="560", height="240", src="https://bilhasry-iprice.github.io/countdowntimer/?lang=id", sandbox="allow-scripts allow-same-origin", layout="responsive")
       amp-img(srcset="assets/img/transparent.png", width="1369", height="457", layout="fill", placeholder)
-    h3.slideInDown Sale terbesar tahun ini segera hadir!
+    h2.slideInDown Sale besar-besaran di tahun 2017 akan segera hadir!
 #subscribe-form
   .subscribe-form-content.row
     .col-md-6.big-highlight
-      amp-img(width="547", height="420", layout="responsive", src="assets/img/banner-90.jpg")
+      amp-list(width="auto", height="280", layout="fixed-height", src="https://bilhasry-iprice.github.io/sale/data/id/data_slides.json")
+        template(type="amp-mustache")
+          amp-carousel(height="280", width="auto",  layout="fixed-height", autoplay, delay="2000", type="slides")
+            |{{#values}}{{#img}}<a href="{{url}}" class="coupon-link"><amp-img src="{{img}}" alt="{{title}}" width="200" height="100" layout="responsive"></amp-img><span>{{intro_text}}</span></a>{{/img}}{{/values}}
     .col-md-6.subscribe-now
-      h4 Siap-siap untuk 11/11 Sale. Jangan lewatkan penawaran dan kupon terbaik. Subscribe di bawah ini!
+      | <h4>Jangan lewatkan Sale 11/11 mendatang!<br />Masukkan alamat email Anda untuk mendapatkan notifikasi selanjutnya.</h4>
       #mc_embed_signup
         form#mc-embedded-subscribe-form.validate(action-xhr="//iprice.us8.list-manage.com/subscribe/post?u=324d1f42da403cc125e4ac5e1&amp;id=8bd51046c3", method="POST",name="mc-embedded-subscribe-form",target="_blank" , novalidate)
           #mc_embed_signup_scroll
@@ -18,4 +21,15 @@
             div.hidden(aria-hidden="true")
               input(type="text",name="b_324d1f42da403cc125e4ac5e1_8bd51046c3" ,tabindex="-1")
             div.clear
-              input#mc-embedded-subscribe.button(type="submit" value="Subscribe" name="subscribe")
+              input#mc-embedded-subscribe.button(type="submit" value="Saya tertarik" name="subscribe")
+#top-stores
+  .top-store-content
+    | <h4>Tidak sabar menunggu 11/11 Sale?<br />Cek juga kupon-kupon yang tersedia saat ini.</h4>
+    amp-list.row.top-store-list(width="auto", height="300", layout="fixed-height", src="https://bilhasry-iprice.github.io/sale/data/id/data_coupons.json")
+      template(type="amp-mustache")
+        .image-entry
+          a(href="{{url}}")
+            amp-img(src="{{img}}", alt="{{title}}", width="400", height="200", layout="responsive")
+            h4 {{title}}
+      div.list-overflow(overflow) 
+        button Load More
