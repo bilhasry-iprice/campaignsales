@@ -206,12 +206,15 @@ p, ul li, li{
 }
 .top-store-content{
     padding: 75px 0px;
-    h4{
+    strong{
 	    font-size: 24px;
 	    width:100%;
 	    max-width: 640px;
 	    margin: 0px auto;
 	    margin-bottom: 50px;
+	    text-align:center;
+	    display: block;
+	    color: $color-blue;
 	}
 }
 
@@ -234,13 +237,12 @@ p, ul li, li{
 		    text-align:center;
 		    text-decoration: none;
 		    amp-img{
-			    height: 100px;
 			    border: 1px solid #efefef;
 			    display: block;
 			    width: 100%;
 			    max-width: 250px;
 			}
-			h4{
+			strong{
 				font-size: 16px;
 				font-weight: lighter;
 				margin-bottom: 10px;
@@ -311,19 +313,21 @@ p, ul li, li{
 
 	#countdown{
 		background: url(./assets/img/11sale_mobile.svg) no-repeat;
+		background-position: center center;
 		margin-bottom: 15px;
 		.countdown-timer{
 		    width: 100%;
-		    min-height: 560px;
+		    min-height: 350px;
 		    padding: 0px 15px;
 		    h1 {
-			    padding: 110px 0px 0px 0px;
+			    padding: 50px 0px 0px 0px;
 			    font-size: 56px;
 			}
 			h2{
 				font-size: 16px;
 				bottom: 15px;
 				line-height:24px;
+				margin-bottom: -15px;
 			}
 		}
 	}
@@ -331,15 +335,22 @@ p, ul li, li{
 	.subscribe-form-content {
 	    padding:0px;
 	    margin: 0px;
+	    strong{
+	    	font-size: 24px;
+		    width:100%;
+		    max-width: 640px;
+		    margin: 0px auto;
+		    margin-bottom: 35px;
+		    margin-top: 35px;
+		    text-align:center;
+		    display: block;
+		    color: $color-blue;
+	    }
 	}
 
 	.col-md-6{
 	    width:100%;
 	    margin : 0px;
-	}
-
-	.col-md-6.big-highlight {
-	    order:2;
 	}
 
 	.col-md-6.subscribe-now{
@@ -357,14 +368,19 @@ p, ul li, li{
 	}
 	.subscribe-now {
 		padding: 25px 20px;
-		h4{
+		p{
 		    padding: 20px 0px 30px 0px;
+		    margin: 0px;
+		    text-align: center;
 		}
 	}
 
 	.top-store-content{
 		padding-right: 20px;
 		padding-left: 20px;
+		strong{
+			display: none;
+		}
 	}
 }
 
@@ -393,11 +409,17 @@ p, ul li, li{
 	}
 	.subscribe-now {
 		padding: 0px 50px;
-		h4{
+		p{
 		    padding: 35px 0px 25px 0px;
-
+		    margin: 0px;
+		    text-align: center;
 		}
 	}
+
+	.subscribe-form-content strong{
+		display: none;
+	}
+
 }
 
 
@@ -475,7 +497,7 @@ p, ul li, li{
 			    > *{
 				    color: #fff;
 				}
-				h4{
+				p{
 				    font-size: 16px;
 				    font-weight: 600;
 				    line-height: 24px;

@@ -49,7 +49,7 @@ input, textarea {
 }
 
 .heading-typography{
-	font-family: 'Noto Sans', 'Noto Sans Thai', sans-serif;
+	font-family: 'Noto Sans', "Noto Sans Thai", sans-serif;
 	color: #444;
 	font-weight: 600;
 	text-align: center;
@@ -57,10 +57,6 @@ input, textarea {
 	padding: 0px;
 }
 
-p a, ul li a, a{
-	color: $color-blue;
-	text-decoration: none;
-}
 h2{
 	@extend .heading-typography;
 	font-size: 36px;
@@ -80,7 +76,7 @@ p, ul li, li{
 }
 
 .main-typography{
-	font-family: 'Noto Sans', 'Noto Sans Thai', sans-serif;
+	font-family: 'Noto Sans', "Noto Sans Thai", sans-serif;
 	font-size: 16px;
 	line-height: 24px;
 	color: #444;
@@ -197,7 +193,7 @@ p, ul li, li{
 				padding: 0px;
 				text-decoration: none;
 				font-size: 13px;
-				font-family: 'Noto Sans', 'Noto Sans Thai', sans-serif;
+				font-family: 'Noto Sans', "Noto Sans Thai", sans-serif;
 				.icon{
 					opacity: .7;
 					margin-top: -3px;
@@ -212,12 +208,15 @@ p, ul li, li{
 }
 .top-store-content{
     padding: 75px 0px;
-    h4{
-	    font-size: 22px;
+    strong{
+	    font-size: 24px;
 	    width:100%;
 	    max-width: 640px;
 	    margin: 0px auto;
 	    margin-bottom: 50px;
+	    text-align:center;
+	    display: block;
+	    color: $color-blue;
 	}
 }
 
@@ -245,7 +244,7 @@ p, ul li, li{
 			    width: 100%;
 			    max-width: 250px;
 			}
-			h4{
+			strong{
 				font-size: 16px;
 				font-weight: lighter;
 				margin-bottom: 10px;
@@ -288,7 +287,7 @@ p, ul li, li{
     cursor: pointer;
     color: #fff;
     font-weight: bold;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans', "Noto Sans Thai", sans-serif;
     background: #36c4d1;
     padding: 8px 35px;
     -webkit-box-shadow: 0px 1px 4px rgba(0,0,0,0.2);
@@ -316,19 +315,21 @@ p, ul li, li{
 
 	#countdown{
 		background: url(./assets/img/11sale_mobile.svg) no-repeat;
+		background-position: center center;
 		margin-bottom: 15px;
 		.countdown-timer{
 		    width: 100%;
-		    min-height: 560px;
+		    min-height: 350px;
 		    padding: 0px 15px;
 		    h1 {
-			    padding: 110px 0px 0px 0px;
-			    font-size: 56px;
+			    padding: 50px 0px 0px 0px;
+			    font-size: 42px;
 			}
 			h2{
 				font-size: 16px;
 				bottom: 15px;
 				line-height:24px;
+				margin-bottom: -15px;
 			}
 		}
 	}
@@ -336,15 +337,22 @@ p, ul li, li{
 	.subscribe-form-content {
 	    padding:0px;
 	    margin: 0px;
+	    strong{
+	    	font-size: 24px;
+		    width:100%;
+		    max-width: 640px;
+		    margin: 0px auto;
+		    margin-bottom: 35px;
+		    margin-top: 35px;
+		    text-align:center;
+		    display: block;
+		    color: $color-blue;
+	    }
 	}
 
 	.col-md-6{
 	    width:100%;
 	    margin : 0px;
-	}
-
-	.col-md-6.big-highlight {
-	    order:2;
 	}
 
 	.col-md-6.subscribe-now{
@@ -362,14 +370,19 @@ p, ul li, li{
 	}
 	.subscribe-now {
 		padding: 25px 20px;
-		h4{
+		p{
 		    padding: 20px 0px 30px 0px;
+		    margin: 0px;
+		    text-align: center;
 		}
 	}
 
 	.top-store-content{
 		padding-right: 20px;
 		padding-left: 20px;
+		strong{
+			display: none;
+		}
 	}
 }
 
@@ -398,11 +411,17 @@ p, ul li, li{
 	}
 	.subscribe-now {
 		padding: 0px 50px;
-		h4{
-		    padding: 45px 0px 25px 0px;
-
+		p{
+		    padding: 35px 0px 25px 0px;
+		    margin: 0px;
+		    text-align: center;
 		}
 	}
+
+	.subscribe-form-content strong{
+		display: none;
+	}
+
 }
 
 
@@ -427,7 +446,7 @@ p, ul li, li{
 			    margin: 0px;
 			    text-align: center;
 			    color: #fff;
-			    font-family: 'Circular Std', 'Noto Sans Thai', sans-serif;
+			    font-family: 'Circular Std', "Noto Sans Thai",sans-serif;
 			}
 			amp-iframe{
 				width:100%;
@@ -440,7 +459,7 @@ p, ul li, li{
 			    margin: 0px;
 			    padding: 10px 0px;
 			    width: 100%;
-			    font-family: 'Circular Std', 'Noto Sans Thai', sans-serif;
+			    font-family: 'Circular Std', "Noto Sans Thai",sans-serif;
 			    font-weight: bold;
 			    text-shadow: 0px 2px 2px rgba(0,0,0,0.4);
 			}
@@ -466,7 +485,6 @@ p, ul li, li{
 	}
 	#subscribe-form{
 		@extend .content-block;	
-		margin-top:25px;
 		.subscribe-form-content{
 		    padding: 0px 20px;
 		    .big-highlight{
@@ -481,7 +499,7 @@ p, ul li, li{
 			    > *{
 				    color: #fff;
 				}
-				h4{
+				p{
 				    font-size: 16px;
 				    font-weight: 600;
 				    line-height: 24px;
@@ -539,7 +557,7 @@ p, ul li, li{
 						    .button{
 							    background: #086A87;
 							    color: #fff;
-							    font-family: "Noto Sans", 'Noto Sans Thai', sans-serif;
+							    font-family: "Noto Sans", "Noto Sans Thai", sans-serif;
 							    font-size: 14px;
 							    text-transform: uppercase;
 							    border-radius: 4px;
@@ -653,7 +671,3 @@ p, ul li, li{
 		}
 	}
 }
-
-
-
-
