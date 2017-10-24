@@ -1,0 +1,41 @@
+#big-slider.width-100
+	amp-carousel(width="1280", height="360", layout="responsive", type="slides", controls, loop, autoplay, delay="3000")
+		amp-img(srcset= main_banner_mobile + " 640w, " + main_banner_desktop + " 1000w", width="1369", height="457", layout="responsive")
+#brand-top
+	.top-selling-products.content-block
+		amp-list(width="auto", height="360", layout="fixed-height", src="https://bilhasry-iprice.github.io/sale/data/hk/data_coupons.json")
+			template(type="amp-mustache")
+				amp-carousel(height="360", width="auto",  layout="fixed-height", autoplay, delay="2000", type="slides")
+					|{{#values}}{{#img}}<a href="{{url}}" class="top-product-list"><amp-img src="{{img}}" alt="{{title}}" width="200" height="100" layout="responsive"></amp-img><span>{{intro_text}}</span></a>{{/img}}{{/values}}
+#wording-eleven
+	.content-block.row
+		.tagline.col-md-3
+			h3 11/11 Sale
+		.tagline-content.col-md-9
+			p Get ready to do all your year’s shopping starting from 1st November 2017. Known as Singles’ Day, 11-11 is a day created for those who would rather shop online than do anything else. The sale starts on 1st November and goes on until 13rd November! Thanks to the amazing discounts from the best merchants in Malaysia, you get rebates and huge promotions on all your favourite items and services. 
+#brand-list
+	.brand-carousel.content-block
+		amp-carousel(width="auto", height="360", type="carousel", layout="fixed-height")
+			a
+				amp-img(srcset="assets/img/campaign/campaign-1.jpg", width="360", height="260", layout="fixed")
+			a
+				amp-img(srcset="assets/img/campaign/campaign-2.jpg", width="360", height="260", layout="fixed")
+			a
+				amp-img(srcset="assets/img/campaign/campaign-3.jpg", width="360", height="260", layout="fixed")
+	.brand-list.row.content-block 
+		amp-list(width="auto", height="280", layout="fixed-height", src="https://bilhasry-iprice.github.io/sale/data/hk/data_slides.json")
+			template(type="amp-mustache")
+				.brand-item.col-md-4
+					a
+						amp-img(srcset="assets/img/campaign/campaign-1.jpg", width="360", height="260", layout="responsive")
+#coupon-list
+	.coupon-list-wrapper.content-block
+		amp-list(width="auto", height="280", layout="fixed-height", src="https://bilhasry-iprice.github.io/sale/data/hk/data_slides.json")
+			template(type="amp-mustache")
+				.coupon-item.col-md-4
+		
+		
+
+
+
+

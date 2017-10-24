@@ -272,7 +272,7 @@ p, ul li, li{
 }
 
 .list-overflow {
-    position: absolute !important;
+    position: absolute ;
     bottom: 0px;
     background: #fff;
     text-align:center;
@@ -354,7 +354,7 @@ p, ul li, li{
 	}
 
 	.col-md-6.subscribe-now{
-	    float:right !important;
+	    float:right ;
 	}
 
 	.image-entry a amp-image{
@@ -488,7 +488,7 @@ p, ul li, li{
 		    .big-highlight{
 				padding: 0px;
 				background: url(./assets/img/linedpaper.png); 
-				.i-amphtml-slide-item.i-amphtml-slide-item-show{
+				amp-carousel > div > div{
 				    padding: 25px;
 				}
 			}
@@ -528,6 +528,18 @@ p, ul li, li{
 							}
 							&:-moz-placeholder { /* Firefox 18- */
 							  color: #FF6633;
+							}
+							&:focus::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+							  color: transparent;
+							}
+							&:focus::-moz-placeholder { /* Firefox 19+ */
+							  color: transparent;
+							}
+							&:focus:-ms-input-placeholder { /* IE 10+ */
+							  color: transparent;
+							}
+							&:focus:-moz-placeholder { /* Firefox 18- */
+							  color: transparent;
 							}
 
 						}

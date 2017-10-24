@@ -1,0 +1,33 @@
+footer
+	section#links
+		.wrapper.cs-wrapper
+			.wrapper.m-3-col
+				.international
+					h3 International
+					ul
+						each url in urls
+							li
+								a(href=url.link, class=url.class, title=url.title)
+									i(class="icon icon-"+url.class)
+									= url.title
+				.ipricegroup
+					h3 iPrice group
+					ul
+						each group in groups
+							li
+								a(href=group.link, class=group.class, title=group.title, target="_blank")= group.title
+				.none-l
+				.social
+					h3 Social
+					ul
+						each social in socials
+							li
+								a(href=social.link, title=social.title, target="_blank") 
+									i(class="icon icon-"+social.class)
+									= social.title
+	section#disclaimer.bg-gray-light
+		.flex.wrapper.en-my
+			.flex.flex-1.flex-column
+				small © 2017 iPrice Group Sdn Bhd (1113954 - D). All rights reserved. 
+				p The prices stated may have increased since the last update. Unfortunately it is not possible for us to update the prices on our website in real-time. Should a shop not offer prices in your local currency, we may calculate the displayed price on daily updated exchange rates.
+			

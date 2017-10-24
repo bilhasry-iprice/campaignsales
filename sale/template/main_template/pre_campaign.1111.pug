@@ -1,0 +1,40 @@
+#countdown.width-100
+  .countdown-timer
+    h1.slideInDown 11/11 Sale
+    amp-iframe(width="560", height="240", src="https://bilhasry-iprice.github.io/countdowntimer/", sandbox="allow-scripts allow-same-origin", layout="responsive")
+      amp-img(srcset="assets/img/transparent.png", width="1369", height="457", layout="fill", placeholder)
+    h2.slideInDown The Biggest Sale in Hong Kong is Coming
+#subscribe-form
+  .subscribe-form-content.row
+    strong If you can't wait for the sale, check out these coupons in the meantime.
+    .col-md-6.big-highlight
+      amp-list(width="auto", height="280", layout="fixed-height", src="https://bilhasry-iprice.github.io/sale/data/"+code+"/data_slides.json")
+        template(type="amp-mustache")
+          amp-carousel(height="280", width="auto",  layout="fixed-height", autoplay, delay="2000", type="slides")
+            |{{#values}}{{#img}}<a href="{{url}}" class="coupon-link"><amp-img src="{{img}}" alt="{{title}}" width="200" height="100" layout="responsive"></amp-img><span>{{intro_text}}</span></a>{{/img}}{{/values}}
+    .col-md-6.subscribe-now
+      | <p>A sale is coming, brace yourself!<br/>Don’t be left out in the cold, let us keep you warm with hot coupons and deals.</p>
+      #mc_embed_signup
+        form#mc-embedded-subscribe-form.validate(action-xhr="//iprice.us8.list-manage.com/subscribe/post?u=324d1f42da403cc125e4ac5e1&amp;id="+mailchimp, method="POST",name="mc-embedded-subscribe-form",target="_blank" , novalidate)
+          #mc_embed_signup_scroll
+            input#mce-EMAIL.email(type="email", name="EMAIL", placeholder="your.email.address@email.com", required )
+            label Email Address
+            div.hidden(aria-hidden="true")
+              input(type="text",name="b_324d1f42da403cc125e4ac5e1_"+mailchimp ,tabindex="-1")
+            div.clear
+              input#mc-embedded-subscribe.button(type="submit" value="Sign up" name="subscribe")
+          div(submit-success)
+            template(type="amp-mustache") Subscription successful!
+          div(submit-error)
+            template(type="amp-mustache") Subscription Error!
+#top-stores
+  .top-store-content
+    strong If you can't wait for the sale, check out these coupons in the meantime.
+    amp-list.row.top-store-list(width="auto", height="300", layout="fixed-height", src="https://bilhasry-iprice.github.io/sale/data/"+code+"/data_coupons.json")
+      template(type="amp-mustache")
+        .image-entry
+          a(href="{{url}}")
+            amp-img(src="{{img}}", alt="{{title}}", width="400", height="200", layout="responsive")
+            strong {{title}}
+      div.list-overflow(overflow) 
+        button Load More

@@ -209,7 +209,7 @@ p, ul li, li{
 .top-store-content{
     padding: 75px 0px;
     strong{
-	    font-size: 24px;
+	    font-size: 21px;
 	    width:100%;
 	    max-width: 640px;
 	    margin: 0px auto;
@@ -487,6 +487,7 @@ p, ul li, li{
 		@extend .content-block;	
 		.subscribe-form-content{
 		    padding: 0px 20px;
+		    margin-top:25px;
 		    .big-highlight{
 				padding: 0px;
 				background: url(./assets/img/linedpaper.png); 
