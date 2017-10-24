@@ -1,0 +1,29 @@
+extends ../../sale_page
+block header
+	- var pageTitle = 'iPrice Sale in Philippines'
+	- var plugins = [{'element':'amp-form','src':'https://cdn.ampproject.org/v0/amp-form-0.1.js'},{'element':'amp-list','src':'https://cdn.ampproject.org/v0/amp-list-0.1.js'}]
+	- var baseUrl = 'https://iprice.ph'
+	- var topWording = 'Search, Compare & Save'
+	- var mustache = 'true'
+	- var og_url = 'https://iprice.ph/sale/'
+	- var og_title = 'iPrice Sale in Philippines'
+	- var og_description = 'Single\'s Day sales is here! Get all your favourite products on discounts!'
+	- var og_image = 'https://bilhasry-iprice.github.io/sale/data/ph/image/1111-sale.jpg'
+
+block context
+	- var headline = 'iPrice Sale in Philippines'
+	- var published_date = new Date('2017-11-11')
+	- var today = new Date()
+	- var image = 'https://bilhasry-iprice.github.io/sale/data/ph/image/1111-sale.jpg'
+	- var lang = 'en'
+
+block content
+	- var data_source = 'https://bilhasry-iprice.github.io/sale/data/ph/data_sale.json'
+	- var h1_heading = 'Philippines Online Sales'
+	- var seo_content = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+	- var h2_heading = 'Upcoming Online Shopping Sales'
+
+block footer
+	- var urls = [{'class':'singapore','link':'https://iprice.sg','title':'Singapore'},{'class':'malaysia','link':'https://iprice.my','title':'Malaysia'},{'class':'indonesia','link':'https://iprice.co.id','title':'Indonesia'},{'class':'hong-kong','link':'https://iprice.hk','title':'Hong Kong'},{'class':'thailand','link':'https://ipricethailand.com','title':'Thailand'},{'class':'vietnam','link':'https://iprice.vn','title':'Vietnam'}]
+	- var groups = [{'class':'about-us','link':'http://ipricegroup.com/','title':'About Us'},{'class':'trends','link':'https://iprice.ph/trends/','title':'Trends'},{'class':'contact-us','link':'http://ipricegroup.com/contact.html','title':'Contact Us'},{'class':'careers','link':'http://ipricegroup.com/career.html','title':'Careers'},{'class':'partners','link':'http://ipricegroup.com/partner.html','title':'Partners'},{'class':'privacy','link':'https://iprice.ph/privacy-policy/','title':'Privacy Policy'},{'class':'terms-of-use','link':'https://iprice.ph/terms-of-use/','title':'Terms of Use'},{'class':'iema','link':'https://iprice.ph/iema/2016/','title':'Vietnam'}]
+	- var socials = [{'class':'facebook','link':'https://www.facebook.com/ipriceMalaysia','title':'Facebook'},{'class':'pinterest','link':'https://www.pinterest.com/ipricemy','title':'Pinterest'},{'class':'twitter','link':'https://twitter.com/iPriceMY','title':'Twitter'},{'class':'google-plus','link':'http://plus.google.com/+Ipricegroup/about','title':'Google+'}]

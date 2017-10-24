@@ -1,0 +1,26 @@
+extends ../../../page.1111.pug
+block header
+	- var pageTitle = '11/11 Sale: Diskon Terbesar Abad ini'
+	- var plugins = [{'element':'amp-form','src':'https://cdn.ampproject.org/v0/amp-form-0.1.js'},{'element':'amp-iframe','src':'https://cdn.ampproject.org/v0/amp-iframe-0.1.js'},{'element':'amp-list','src':'https://cdn.ampproject.org/v0/amp-list-0.1.js'},{'element':'amp-carousel','src':'https://cdn.ampproject.org/v0/amp-carousel-0.1.js'}]
+	- var baseUrl = 'https://iprice.co.id'
+	- var topWording = 'Cari, Bandingkan & Lebih Hemat'
+	- var og_image = 'https://bilhasry-iprice.github.io/sale/data/sg/image/1111-sale.jpg'
+	- var published_date = new Date('2017-10-01')
+	- var description = 'Kupon diskon dari semua online shopping website favorit Anda'
+	- var image = 'https://bilhasry-iprice.github.io/sale/data/sg/image/1111-sale.jpg'
+	- var lang = 'en'
+	- var mustache = 'true'
+	- var homeUrl = baseUrl + '/sale/1111/'
+
+block content
+	- var d1 					= new Date('2017-10-09')
+	- var published_date 		= d1.toDateString() 
+	- var d2 					= new Date()
+	- var today 				= d2.toDateString()
+	- var code = 'id'
+	- var mailchimp = '94b723e79d'
+
+block footer
+	- var urls = [{'class':'singapore','link':'https://iprice.sg','title':'Singapore'},{'class':'malaysia','link':'https://iprice.co.my','title':'Malaysia'},{'class':'philippines','link':'https://iprice.ph','title':'Philippines'},{'class':'hong-kong','link':'https://iprice.hk','title':'Hong Kong'},{'class':'thailand','link':'https://ipricethailand.com','title':'Thailand'},{'class':'vietnam','link':'https://iprice.vn','title':'Vietnam'}]
+	- var groups = [{'class':'about-us','link':'http://ipricegroup.com/','title':'Tentang Kami'},{'class':'trends','link':'https://iprice.co.id/trends/','title':'Trend'},{'class':'contact-us','link':'http://ipricegroup.com/contact.html','title':'Hubungi Kami'},{'class':'careers','link':'http://ipricegroup.com/career.html','title':'Karir'},{'class':'partners','link':'http://ipricegroup.com/partner.html','title':'Mitra'},{'class':'privacy','link':'https://iprice.co.id/privacy-policy/','title':'Kebijakan Privasi'},{'class':'terms-of-use','link':'https://iprice.co.id/terms-of-use/','title':'Syarat & Ketentuan'},{'class':'iema','link':'https://iprice.co.id/iema/2016/','title':'iEMA'}]
+	- var socials = [{'class':'facebook','link':'https://www.facebook.com/ipriceIndonesia','title':'Facebook'},{'class':'pinterest','link':'https://www.pinterest.com/ipriceid','title':'Pinterest'},{'class':'twitter','link':'https://twitter.com/iPriceID','title':'Twitter'},{'class':'google-plus','link':'http://plus.google.com/+Ipricegroup/about','title':'Google+'}]
