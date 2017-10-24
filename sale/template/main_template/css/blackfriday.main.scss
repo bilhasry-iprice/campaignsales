@@ -557,6 +557,10 @@ div#big-slider amp-carousel{
 			    text-align:center;
 			    color: $color-blue;
 			}
+			p{
+				padding: 0px 15px;
+				margin-bottom: 24px;
+			}
 		}
 		.sup-content.row {
 		    @extend .content-block;	
