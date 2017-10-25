@@ -266,7 +266,7 @@ p, ul li, li{
 	}
 
 	#countdown{
-		background: url(./assets/img/11sale_mobile.svg) no-repeat;
+		background: url(./assets/img/assault.png) no-repeat;
 		background-position: center center;
 		margin-bottom: 15px;
 		.countdown-timer{
@@ -340,7 +340,7 @@ p, ul li, li{
 @media screen and (min-width:1024px)
 {
 	#countdown{
-		background: url(./assets/img/11sale.svg) no-repeat;
+		background: url(./assets/img/assault.png) no-repeat;
 		background-size: 100%;
 		.countdown-timer{
 		    h1 {
@@ -443,14 +443,14 @@ div#big-slider amp-carousel{
 		    padding: 0px 20px;
 		    .big-highlight{
 				padding: 0px;
-				background: url(./assets/img/linedpaper.png); 
+				background: url(./assets/img/soft_kill.png); 
 				amp-carousel > div > div
 				{
 				    padding: 25px;
 				}
 			}
 			.subscribe-now {
-			    background: #33CCCC;
+			    background: url(./assets/img/soft_kill.png); 
 			    > *{
 				    color: #fff;
 				}
@@ -522,7 +522,7 @@ div#big-slider amp-carousel{
 						    text-align:center;
 						    padding-top: 25px;
 						    .button{
-							    background: #086A87;
+							    background: #00033F;
 							    color: #fff;
 							    font-family: "Noto Sans", sans-serif;
 							    font-size: 14px;
@@ -549,7 +549,7 @@ div#big-slider amp-carousel{
 			@extend .content-block;	
 			margin-top: 35px;
 			h3 {
-			    font-size: 32px;
+			    font-size: 28px;
 			    width:100%;
 			    max-width: 640px;
 			    margin: 0px auto;
