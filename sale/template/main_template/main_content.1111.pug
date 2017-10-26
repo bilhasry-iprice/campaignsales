@@ -1,41 +1,44 @@
 #big-slider.width-100
-	amp-carousel(width="1280", height="360", layout="responsive", type="slides", controls, loop, autoplay, delay="3000")
-		amp-img(srcset= main_banner_mobile + " 640w, " + main_banner_desktop + " 1000w", width="1369", height="457", layout="responsive")
+	amp-img(media="(min-width: 650px)",src=main_banner_desktop, width="3.2" height="1" layout="responsive")
+	amp-img(media="(max-width: 649px)",src=main_banner_mobile, width="16" height="9" layout="responsive")
 #brand-top
 	.top-selling-products.content-block
-		amp-list(width="auto", height="360", layout="fixed-height", src="https://bilhasry-iprice.github.io/sale/data/hk/data_coupons.json")
+		amp-list(width="auto", height="180", layout="fixed-height", src="https://bilhasry-iprice.github.io/sale/data/hk/1111/data_product.json")
 			template(type="amp-mustache")
-				amp-carousel(height="360", width="auto",  layout="fixed-height", autoplay, delay="2000", type="slides")
-					|{{#values}}{{#img}}<a href="{{url}}" class="top-product-list"><amp-img src="{{img}}" alt="{{title}}" width="200" height="100" layout="responsive"></amp-img><span>{{intro_text}}</span></a>{{/img}}{{/values}}
+				amp-carousel(height="180", width="auto",  layout="fixed-height", type="carousel")
+					|{{#values}}{{#img}}<a href="{{url}}" class="top-product-list"><amp-img src="{{img}}" alt="{{title}}" width="16" height="9" layout="responsive"></amp-img><span>{{title}}</span></a>{{/img}}{{/values}}
 #wording-eleven
 	.content-block.row
 		.tagline.col-md-3
 			h3 11/11 Sale
 		.tagline-content.col-md-9
-			p Get ready to do all your year’s shopping starting from 1st November 2017. Known as Singles’ Day, 11-11 is a day created for those who would rather shop online than do anything else. The sale starts on 1st November and goes on until 13rd November! Thanks to the amazing discounts from the best merchants in Malaysia, you get rebates and huge promotions on all your favourite items and services. 
+			p !{tagline} 
 #brand-list
+	h3 !{brandTagline}
 	.brand-carousel.content-block
-		amp-carousel(width="auto", height="360", type="carousel", layout="fixed-height")
-			a
-				amp-img(srcset="assets/img/campaign/campaign-1.jpg", width="360", height="260", layout="fixed")
-			a
-				amp-img(srcset="assets/img/campaign/campaign-2.jpg", width="360", height="260", layout="fixed")
-			a
-				amp-img(srcset="assets/img/campaign/campaign-3.jpg", width="360", height="260", layout="fixed")
-	.brand-list.row.content-block 
-		amp-list(width="auto", height="280", layout="fixed-height", src="https://bilhasry-iprice.github.io/sale/data/hk/data_slides.json")
+		amp-list(media="(max-width: 649px)",width="auto", height="215", layout="fixed-height", src="https://bilhasry-iprice.github.io/sale/data/hk/1111/data_brands.json")
 			template(type="amp-mustache")
+				amp-carousel(height="215", width="auto",  layout="fixed-height", type="slides", autoplay, delay="3000")
+					|{{#values}}{{#img}}<a href="{{url}}" class="top-product-list"><amp-img src="{{img}}" alt="{{title}}" width="64" height="43" layout="responsive"></amp-img><span>{{description}}</span></a>{{/img}}{{/values}}
+	.brand-list.row.content-block 
+		amp-list(media="(min-width: 650px)",width="auto", height="250", layout="fixed-height", src="https://bilhasry-iprice.github.io/sale/data/hk/1111/data_brands.json")
+			template(type="amp-mustache")
+				|{{#values}}{{#img}}
 				.brand-item.col-md-4
 					a
-						amp-img(srcset="assets/img/campaign/campaign-1.jpg", width="360", height="260", layout="responsive")
+						amp-img(src="{{img}}", width="64", height="43", layout="responsive")
+						span {{description}}
+				|{{/img}}{{/values}}
 #coupon-list
+	h3 !{couponTagline}
 	.coupon-list-wrapper.content-block
-		amp-list(width="auto", height="280", layout="fixed-height", src="https://bilhasry-iprice.github.io/sale/data/hk/data_slides.json")
+		amp-list(width="auto", height="280", layout="fixed-height", src="https://bilhasry-iprice.github.io/sale/data/hk/1111/data_coupons.json")
 			template(type="amp-mustache")
 				.coupon-item.col-md-4
-		
-		
-
-
-
-
+					amp-img(src="{{img}}", layout="responsive", width="2", height="1")
+					span.highlight {{highlight}}
+					span.description {{description}}
+					span.coupon_code 
+						a
+							span.overlay Reveal The Code
+							label {{coupon_code}}
