@@ -1,7 +1,7 @@
 extends ../../../page.1111.pug
 block header
 	- var pageTitle = 'iPrice Hong Kong 11/11 Sales'
-	- var plugins = [{'element':'amp-form','src':'https://cdn.ampproject.org/v0/amp-form-0.1.js'},{'element':'amp-iframe','src':'https://cdn.ampproject.org/v0/amp-iframe-0.1.js'},{'element':'amp-list','src':'https://cdn.ampproject.org/v0/amp-list-0.1.js'},{'element':'amp-carousel','src':'https://cdn.ampproject.org/v0/amp-carousel-0.1.js'}]
+	- var plugins = [{'element':'amp-form','src':'https://cdn.ampproject.org/v0/amp-form-0.1.js'},{'element':'amp-list','src':'https://cdn.ampproject.org/v0/amp-list-0.1.js'},{'element':'amp-carousel','src':'https://cdn.ampproject.org/v0/amp-carousel-0.1.js'}]
 	- var baseUrl = 'https://iprice.hk'
 	- var topWording = 'Search, Compare & Save'
 	- var og_image = 'https://bilhasry-iprice.github.io/sale/data/hk/image/1111-sale.jpg'
@@ -19,6 +19,9 @@ block content
 	- var main_banner_mobile 	= 'https://bilhasry-iprice.github.io/sale/data/hk/image/main_banner_mobile.jpg'
 	- var d2 					= new Date()
 	- var today 				= d2.toDateString()
+	- var tagline 				= 'Get ready to do all your year\'s shopping starting from 1st November 2017. Known as Singles\' Day, 11-11 is a day created for those who would rather shop online than do anything else. The sale starts on 1st November and goes on until 13rd November! Thanks to the amazing discounts from the best merchants in Malaysia, you get rebates and huge promotions on all your favourite items and services. '
+	- var brandTagline			= 'Discounts for your loved brands'
+	- var couponTagline 		= 'That\'s it? No, we give you more than you ever wanted!<br />More best coupons and vouchers'
 
 block footer
 	- var urls = [{'class':'singapore','link':'https://iprice.sg','title':'Singapore'},{'class':'malaysia','link':'https://iprice.my','title':'Malaysia'},{'class':'indonesia','link':'https://iprice.co.id','title':'Indonesia'},{'class':'philippines','link':'https://iprice.ph','title':'Philippines'},{'class':'thailand','link':'https://ipricethailand.com','title':'Thailand'},{'class':'vietnam','link':'https://iprice.vn','title':'Vietnam'}]
