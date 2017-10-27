@@ -24,8 +24,8 @@
 		amp-list(media="(min-width: 650px)",width="auto", height="250", layout="fixed-height", src="https://bilhasry-iprice.github.io/sale/data/hk/1111/data_brands.json")
 			template(type="amp-mustache")
 				|{{#values}}{{#img}}
-				.brand-item.col-md-4
-					a
+				.brand-item.col-md-6
+					a(href="{{url}}")
 						amp-img(src="{{img}}", width="64", height="43", layout="responsive")
 						span {{description}}
 				|{{/img}}{{/values}}
@@ -39,6 +39,6 @@
 					span.highlight {{highlight}}
 					span.description {{description}}
 					span.coupon_code 
-						a
+						a(href="{{url}}")
 							span.overlay Reveal The Code
 							label {{coupon_code}}
