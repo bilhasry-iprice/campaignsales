@@ -10,6 +10,10 @@ $color-grey 	: #EAEAEA;
 	margin: 0px auto;
 }
 
+.row{
+	width: 100%;
+	flex-wrap: wrap;
+}
 .row > [class*='col-'],
 .row > [class*='col-md'] {
     -webkit-box-sizing: border-box;
@@ -67,71 +71,154 @@ $color-grey 	: #EAEAEA;
 		margin:36px 0px;
 		.brand-list{
 			amp-list{
-			    min-height: 320px;
+			    min-height: 450px;
 			    clear:both;
 			    .brand-item{
-			    	max-width: 320px;
-			    	margin-right: 32px;
+			    	max-width: 500px;
+			    	margin-right: 24px;
 			    	margin-bottom: 36px;
-			    	&:nth-child(3n){
+			    	&:nth-child(2n){
 			    		margin-right: 0px;
 			    	}
-			    	a span{
-			    		font-size: 16px;
-					    line-height: 18px;
-					    text-align: center;
-					    display: block;
-					    margin-top: 10px;
-			    	}
+			    	a {
+					    position:relative;
+					    overflow:hidden;
+					    display:table;
+					    width:100%;
+					    line-height:350px;
+					    text-align:center;
+					    cursor:pointer;
+					    span{
+						    position:absolute;
+						    width:100%;
+						    height:100%;
+						    top:0px;
+						    left:0px;
+						    display: inline-block;
+						    vertical-align: middle;
+						    background: rgba(102, 4, 44,0.8);
+						    color:#fff;
+						    font-size: 21px;
+						    -webkit-transform:rotateY(90deg);
+						    -webkit-transition: all 250ms ease-in 0s;
+						    transition: all 250ms ease-in 0s;
+						    opacity:0;
+						    padding:0px 35px;
+						    
+						}
+						&:hover span{
+						    -webkit-transform:rotateY(0deg);
+						    opacity: 1.0;
+						}
+					}
+			    	
 			    }
+			    
 			}
 		}
 	}
 	#coupon-list{
 		.coupon-list-wrapper amp-list > div{
-    padding: 16px 8px;
-}
-.coupon-item.col-md-4 {
-    border: 1px solid #e7e7e7;
-    margin-right: 24px;
-    max-width: 320px;
-    border-radius: 8px;
-    padding: 16px;
-    margin-bottom: 16px;
-    margin-top: 16px;
-    -webkit-box-shadow: 0px 1px 5px 1px rgba(164,164,164,0.2);
-}
+		    padding: 16px 8px;
+		}
+		.coupon-item.col-md-4 {
+		    border: 1px solid #e7e7e7;
+		    margin-right: 24px;
+		    max-width: 320px;
+		    border-radius: 8px;
+		    padding: 16px;
+		    margin-bottom: 16px;
+		    margin-top: 16px;
+		    -webkit-box-shadow: 0px 1px 5px 1px rgba(164,164,164,0.2);
+			&:nth-child(3n){
+			    margin-right:0px;
+			}
+			amp-img{
+			    max-width:200px;
+			}
+			.highlight{
+			    font-size: 32px;
+			    display: block;
+			    font-weight: bold;
+			    color: #f63;
+			}
+			.description{
+			    font-size: 16px;
+			    line-height: 24px;
+			    display: block;
+			}
+			.coupon_code{
+			    margin-top:16px;
+			    display:block;
+			    border: 2px solid #f63;
+			    border-radius: 4px;
+			    padding: 8px;
+			    font-size: 18px;
+			    text-align:right;
+			    position: relative;
+			    a{
+			    	.overlay{
+			    		position: absolute;
+					    top:0px;
+					    left:0px;
+					    padding: 11px;
+					    background: #f63;
+					    width: 80%;
+					    color:#fff;
+					    text-align:left;
+					    &:hover{
+						    background: #ff531a;
+						}
+						&::before{
+							background: #f63;
+						    content: ' ';
+						    display:block;
+						    width:50px;
+						    right: -28px;
+						    -webkit-transform: skew(30deg);
+							   -moz-transform: skew(30deg);
+							     -o-transform: skew(30deg);
+						    top: 0px;
+						    height:100%;
+						    position:absolute;
+						    -webkit-transition: right 250ms ease 0s;
+						    transition: right 550ms ease 0s;
+						}
+						&::after{
+						    -webkit-backface-visibility: hidden;
+						    backface-visibility: hidden;
+						    background: -webkit-linear-gradient(52deg,#e63900 0,#b24723 49%,rgba(0,122,198,0) 50%,rgba(255,255,255,0) 100%) 0 6px no-repeat transparent;
+						    background: linear-gradient(38deg,#e63900 0,#b24723 49%,rgba(0,122,198,0) 50%,rgba(255,255,255,0) 100%) 0 6px no-repeat transparent;
+						    border-radius: 6px;
+						    content: "";
+						    height: 45px;
+						    position: absolute;
+						    right: -50px;
+						    top: 3px;
+						    width: 45px;
+						    z-index: 1;
+						    -webkit-transform: rotateZ(22deg) translate(0,-10px) scaleX(.9);
+						    transform: rotateZ(22deg) translate(0,-10px) scaleX(.9);
+						    -webkit-transition: -webkit-transform 250ms ease 0s,background-position 250ms ease 0s;
+						    transition: transform 500ms ease 0s,background-position 500ms ease 0s;
+						}
+			    	}
+			    	&:hover{
+			    		text-decoration: none;
+			    		.overlay{
+			    			&::after{
+			    				transform: rotateZ(15deg) translate(-8px,-8px) scaleX(1);
+			    			}
+			    			&::before{
+			    				right: -17px;
+		    					background: #ff531a;
+			    			}
+			    		}
+			    	}
+			    }
+			}
+		}
 
-.coupon-item:nth-child(3n){
-    margin-right:0px;
-}
-
-.coupon-item amp-img{
-    max-width:200px;
-}
-
-.coupon-item .highlight{
-    font-size: 32px;
-    display: block;
-    font-weight: bold;
-    color: #f63;
-}
-
-.coupon-item .description{
-    font-size: 16px;
-    line-height: 24px;
-    display: block;
-}
-
-.coupon-item .coupon_code{
-    margin-top:16px;
-    display:block;
-    border: 2px solid #f63;
-    border-radius: 4px;
-    padding: 8px;
-    font-size: 18px;
-    text-align:right;
-}
 	}
 	#sup-section{
 		.heading-content{
@@ -239,4 +326,59 @@ $color-grey 	: #EAEAEA;
 
 		}
 	}
+}
+
+@media screen and (max-width: 649px){
+	#main-content{
+		.top-selling-products amp-list{
+		    div amp-carousel{
+		    	div a{
+		    		margin-right:0px;
+		    		padding:0px 15px;
+		    	}
+
+		    }
+		}
+		#coupon-list{
+			padding: 0px 16px;
+			.coupon-list-wrapper{
+				amp-list{
+					min-height: 500px;
+					.coupon-item{
+						width:100%;
+						float:none;
+						margin: 0px;
+						max-width:100%;
+						clear:both;
+						margin-bottom: 16px;
+					}
+				}
+			}
+			
+		}
+		.heading-content{
+			p{
+				padding: 0px 16px;
+			}
+		}
+		
+		#sup-section{
+			.sup-item{
+				padding: 16px;
+				width:100%;
+				float:none;
+				margin: 0px;
+				max-width:100%;
+				clear:both;
+			}
+			.sup-item:nth-child(2){
+				padding: 16px;
+			}
+			.sup-item:nth-child(3){
+				padding: 16px;
+			}
+		}
+		
+	}
+	
 }
