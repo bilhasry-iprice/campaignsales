@@ -26,6 +26,8 @@ $color-grey 	: #EAEAEA;
     float:left;
 }
 
+
+
 @for $i from 1 through 12{
 	.col-md-#{$i}{
 		width: percentage($i/12);
@@ -66,9 +68,24 @@ $color-grey 	: #EAEAEA;
 
 	    }
 	}
+	#wording-eleven{
+	    clear:both;
+	    display:table;
+	    margin: 0px auto;
+	}
 	#brand-list{
 		clear:both;
 		margin:36px 0px;
+		h3{
+		    font-size: 28px;
+		    line-height:48px;
+		    padding:24px 0px;
+		    display: block;
+		    text-align:center;
+		    clear:both;
+		    font-family: 'Noto Sans', sans-serif;
+		    color: $color-blue;
+		}
 		.brand-list{
 			amp-list{
 			    min-height: 450px;
@@ -118,6 +135,15 @@ $color-grey 	: #EAEAEA;
 		}
 	}
 	#coupon-list{
+		h3{
+		    font-size: 21px;
+		    line-height:24px;
+		    padding:24px 0px;
+		    display: block;
+		    text-align:center;
+		    clear:both;
+		    color: $color-blue;
+		}
 		.coupon-list-wrapper amp-list > div{
 		    padding: 16px 8px;
 		}
@@ -339,8 +365,18 @@ $color-grey 	: #EAEAEA;
 
 		    }
 		}
+		#brand-list h3{
+			font-size: 24px;
+			line-height: 28px;
+		}
 		#coupon-list{
 			padding: 0px 16px;
+			h3{
+			    font-size: 18px;
+			    line-height:24px;
+			    padding:16px;
+			    display: block;
+			}
 			.coupon-list-wrapper{
 				amp-list{
 					min-height: 500px;
