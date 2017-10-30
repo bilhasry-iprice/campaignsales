@@ -34,17 +34,50 @@ $color-grey 	: #EAEAEA;
 	}	
 }
 
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content; 
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  } 
+}
+
+// use of keyframes mixin
+@include keyframes(bgcolor) {
+  0% {
+    background-color: #fff;
+  }
+  50% {
+    background-color: #f7f7f7;
+  }
+  100% {
+    background-color: #f7f7f7;
+  } 
+}
 
 #main-content{
 	margin: 0px auto;
 	width: 100%;
 	padding: 0px;
 	#big-slider{
-		max-height: 457px;
+		max-height: 212px;
 		margin: 0px;
+    	background: #d61d4b;
+		amp-img{
+		    max-width:1480px;
+		    margin: 0px auto;
+
+		}
 	}
 	.top-selling-products amp-list{
-	    margin: 36px 0px;
+	    margin: 18px 0px;
 	    min-height:210px;
 	    display:block;
 	    div amp-carousel{
@@ -71,20 +104,87 @@ $color-grey 	: #EAEAEA;
 	#wording-eleven{
 	    clear:both;
 	    display:table;
-	    margin: 0px auto;
+	    width: 100%;
+	    .tagline-heading{
+		    width: 100%;
+		    display: block;
+		    margin: 0px auto;
+		    background: url(./assets/img/11sale.svg) no-repeat center center;
+		    background-size: 250%;
+			padding: 32px 0px 40px 0px;
+			h1,p{
+			    color: #fff;
+			    text-align:center;
+			    width:100%;
+			    padding: 0px 16px;
+			}
+			h1{
+				font-size: 42px;
+				line-height:1;
+			}
+			p{
+				font-size: 14px;
+	    		font-weight: normal;
+			}
+			.tagline-content{
+				max-width: 768px;
+				margin: 0px auto;
+				display: block;
+			}
+		}
+		.top-brand-list{
+			padding:36px 0px 48px 0px;
+			.brand-item a{
+			    border-radius: 50%;
+			    border: 3px solid #f7f7f7;
+			    display: block;
+			    width: 100%;
+			    height:100%;
+			    overflow:hidden;
+			    padding: 15px;
+			    max-width: 148px;
+			    margin: 0px auto;
+			    -webkit-transition: all ease-in 500ms;
+			    transition: all ease-in 500ms;
+			    &:hover{
+					-webkit-transform: rotateY(360deg);
+			    }
+			}
+			.brand-item .title,.title{
+	    		text-align: center;
+	    		font-size: 16px;
+	    		padding-top:5px;
+	    		line-height: 24px;
+	    		width:100%;
+	    		display: block;
+	    	}
+			a{
+				margin-right: 16px;
+			}
+		}
 	}
 	#brand-list{
 		clear:both;
-		margin:36px 0px;
-		h3{
+		margin:0px 0px 48px 0px;
+		padding: 48px 0px;
+		background: #f7f7f7;
+		h2{
 		    font-size: 28px;
-		    line-height:48px;
-		    padding:24px 0px;
+		    line-height:36px;
+		    padding:0px 16px;
 		    display: block;
 		    text-align:center;
 		    clear:both;
 		    font-family: 'Noto Sans', sans-serif;
 		    color: $color-blue;
+		}
+		p{
+			margin-bottom: 24px;
+			text-align:center;
+			margin: 0px auto;
+			display: block;
+			padding: 0px 16px 24px 16px;
+			max-width: 768px;
 		}
 		.brand-list{
 			amp-list{
@@ -135,43 +235,67 @@ $color-grey 	: #EAEAEA;
 		}
 	}
 	#coupon-list{
-		h3{
-		    font-size: 21px;
-		    line-height:24px;
-		    padding:24px 0px;
+		padding:0px 0px 24px 0px;
+		h2{
+		    font-size: 28px;
+		    line-height:36px;
 		    display: block;
 		    text-align:center;
+		    padding:0px 16px;
 		    clear:both;
 		    color: $color-blue;
 		}
-		.coupon-list-wrapper amp-list > div{
-		    padding: 16px 8px;
+		p{
+			margin-bottom: 24px;
+			text-align:center;
+			margin: 0px auto;
+			display: block;
+			padding: 0px 16px;
+			max-width: 768px;
+
 		}
-		.coupon-item.col-md-4 {
+		.coupon-list-wrapper{
+			padding-top: 24px;
+			amp-list{
+				min-height: 800px;
+				div{
+			    	padding: 16px 8px;
+			    }
+			}
+		}
+		.coupon-item.col-md-3 {
 		    border: 1px solid #e7e7e7;
-		    margin-right: 24px;
-		    max-width: 320px;
+		    margin-right: 16px;
+		    max-width: 244px;
 		    border-radius: 8px;
 		    padding: 16px;
 		    margin-bottom: 16px;
 		    margin-top: 16px;
 		    -webkit-box-shadow: 0px 1px 5px 1px rgba(164,164,164,0.2);
-			&:nth-child(3n){
+		    -webkit-transition: all ease-in 250ms;
+		    transition: all ease-in 250ms;
+		    &:hover{
+				border: 1px solid #cdcdcd;
+				-webkit-box-shadow: 0px 1px 5px 1px rgba(148,148,148,0.2);
+		    }
+			&:nth-child(4n){
 			    margin-right:0px;
 			}
 			amp-img{
-			    max-width:200px;
+			    max-width:128px;
 			}
 			.highlight{
-			    font-size: 32px;
+			    font-size: 21px;
 			    display: block;
 			    font-weight: bold;
 			    color: #f63;
 			}
 			.description{
-			    font-size: 16px;
-			    line-height: 24px;
+			    font-size: 13px;
+			    line-height: 18px;
 			    display: block;
+			    min-height: 56px;
+			    font-family: 'Noto Sans', sans-serif;
 			}
 			.coupon_code{
 			    margin-top:16px;
@@ -243,19 +367,54 @@ $color-grey 	: #EAEAEA;
 			    	}
 			    }
 			}
+			.direct {
+				border:2px solid #07576E;
+				a{
+					.overlay{
+					    width: 100%;
+					    background: #07576E;
+					    border-radius: 0px;
+					    text-indent: -99999px;
+					    &::after{
+							display: none ;
+					    }
+					    &::before{
+						    display: none ;
+						}
+						&:hover{
+						    background: #07576E;
+						}
+					}
+					&::before{
+					    content: "Get This Deal";
+					    color: #fff;
+					    display: block;
+					    padding-left: 5px;
+					    font-size: 14px;
+					    line-height: 28px;
+					    width: 100%;
+					    position: absolute;
+					    z-index: 4;
+					    text-align:left;
+					}
+				}
+			}
 		}
 
 	}
 	#sup-section{
+	    background: #f7f7f7;
+	    padding-top:6px;
 		.heading-content{
 			@extend .content-block;	
 			margin-top: 35px;
 			h3 {
-			    font-size: 32px;
+			    font-size: 28px;
+			    line-height: 36px;
 			    width:100%;
 			    max-width: 640px;
 			    margin: 0px auto;
-			    margin-bottom: 50px;
+			    margin-bottom: 24px;
 			    text-align:center;
 			    color: $color-blue;
 			}
@@ -319,7 +478,8 @@ $color-grey 	: #EAEAEA;
 	#eleven-content{
 		width: 100%;
 		display: table;
-		margin: 40px 0px;
+		padding: 24px 0px;
+		background: #f7f7f7;
 		.post-content{
 			width: 100%;
 			max-width: 1024px;
@@ -356,26 +516,90 @@ $color-grey 	: #EAEAEA;
 
 @media screen and (max-width: 649px){
 	#main-content{
+		#big-slider{
+			max-height: 148px;
+		}
 		.top-selling-products amp-list{
+			min-height: 165px;
 		    div amp-carousel{
 		    	div a{
 		    		margin-right:0px;
 		    		padding:0px 15px;
+		    		amp-img{
+		    			min-height: 120px;
+    					min-width: 264px;
+		    		}
 		    	}
 
 		    }
+		    .amp-carousel-button{
+		    	top:35%;
+		    }
 		}
-		#brand-list h3{
-			font-size: 24px;
-			line-height: 28px;
+		#wording-eleven{
+			.tagline-heading{
+				background: url(./assets/img/11sale.svg) no-repeat center center;
+				background-size: 250%;
+				h1{
+					font-size: 36px;
+				}
+				.tagline-content{
+					p{
+						text-align:left;
+						margin-top: 8px;
+
+					}
+				}
+			}
+			.top-brand-list{
+				.brand-item{
+					width:136px;
+					height: 136px;
+				}
+			}
+		}
+		#brand-list{
+			h2{
+				font-size: 24px;
+				line-height: 28px;
+				padding: 0px 16px 8px 16px;
+			}
+			p{
+				margin-bottom: 24px;
+				text-align:left;
+				margin: 0px auto;
+				display: block;
+				padding: 0px 16px 16px 16px;
+				max-width: 768px;
+
+			}
+			a.top-product-list {
+			    position: relative !important;
+			    span{
+				    position: absolute;
+				    bottom: 0px;
+				    padding: 16px;
+				    width:100%;
+				    display:block;
+				    background: rgba(231,103,60,0.8);
+				    color: #fff;
+				}
+			} 
 		}
 		#coupon-list{
 			padding: 0px 16px;
-			h3{
-			    font-size: 18px;
-			    line-height:24px;
-			    padding:16px;
+			h2{
+			    font-size: 24px;
+			    line-height:28px;
+			    padding:0px 16px 8px 16px;
 			    display: block;
+			}
+			p{
+				text-align:left;
+				margin: 0px auto;
+				display: block;
+				padding: 0px 16px 16px 16px;
+				max-width: 768px;
 			}
 			.coupon-list-wrapper{
 				amp-list{
@@ -387,18 +611,56 @@ $color-grey 	: #EAEAEA;
 						max-width:100%;
 						clear:both;
 						margin-bottom: 16px;
+						amp-img{
+						    float:left;
+						    width:50%;
+						}
+						span.highlight {
+						    width:50%;
+						    float:right;
+						    text-align:right;
+						    line-height: 28px;
+						    font-size: 21px;
+						}
+						span.description{
+						    clear:both;
+						    padding: 10px 5px 0px 5px;
+						    min-height: 18px;
+						}
+						.direct a{
+							.overlay{
+							    text-indent: -99999px;
+							}
+							&::before{
+							    content: "Get This Deal";
+							    color: #fff;
+							    display: block;
+							    padding-left: 5px;
+							    font-size: 14px;
+							    line-height: 28px;
+							    width: 100%;
+							    position: absolute;
+							    z-index: 4;
+							    text-align:left;
+							}
+						}
 					}
 				}
 			}
 			
 		}
-		.heading-content{
-			p{
-				padding: 0px 16px;
-			}
-		}
 		
 		#sup-section{
+			.heading-content{
+				h3{
+					padding: 0px 16px;
+					font-size: 24px;
+					line-height: 28px;
+				}
+				p{
+					padding: 0px 16px;
+				}
+			}
 			.sup-item{
 				padding: 16px;
 				width:100%;
@@ -406,12 +668,15 @@ $color-grey 	: #EAEAEA;
 				margin: 0px;
 				max-width:100%;
 				clear:both;
-			}
-			.sup-item:nth-child(2){
-				padding: 16px;
-			}
-			.sup-item:nth-child(3){
-				padding: 16px;
+				&:nth-child(2){
+					padding: 16px;
+				}
+				&:nth-child(3){
+					padding: 16px;
+				}
+				h4{
+					font-size: 18px;
+				}
 			}
 		}
 		

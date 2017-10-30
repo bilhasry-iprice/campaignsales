@@ -60,6 +60,30 @@ gulp.task('hk', ['sass'], function(){
     .pipe(gulp.dest('./sale/hk/1111/'))
 });
 
+gulp.task('my', ['sass'], function(){
+  return gulp.src('./sale/my/1111/index.pug')
+    .pipe(pug())
+    .pipe(gulp.dest('./sale/my/1111/'))
+});
+
+gulp.task('ph', ['sass'], function(){
+  return gulp.src('./sale/ph/1111/index.pug')
+    .pipe(pug())
+    .pipe(gulp.dest('./sale/ph/1111/'))
+});
+
+gulp.task('sg', ['sass'], function(){
+  return gulp.src('./sale/sg/1111/index.pug')
+    .pipe(pug())
+    .pipe(gulp.dest('./sale/sg/1111/'))
+});
+
+gulp.task('id', ['sass'], function(){
+  return gulp.src('./sale/id/1111/index.pug')
+    .pipe(pug())
+    .pipe(gulp.dest('./sale/id/1111/'))
+});
+
 // gulp.task('sass', function () {
 //   return gulp.src('./sale/template/main_template/css/blackfriday.main.scss')
 //     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
@@ -84,4 +108,4 @@ gulp.task('hk', ['sass'], function(){
 //     .pipe(gulp.dest('./sale/my/blackfriday/'))
 // });
 
-gulp.task('default', [ 'hk']);
+gulp.task('default', [ 'hk', 'my', 'ph', 'sg', 'id']);
