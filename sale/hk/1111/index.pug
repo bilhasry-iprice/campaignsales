@@ -1,30 +1,43 @@
 extends ../../../page.1111.pug
 block header
-	- var pageTitle = 'iPrice Hong Kong 11/11 Sales'
+	- var pageTitle = 'Enjoy 11.11 Sale Hong Kong - Exclusive 1111 Promo Codes & Vouchers'
 	- var plugins = [{'element':'amp-form','src':'https://cdn.ampproject.org/v0/amp-form-0.1.js'},{'element':'amp-list','src':'https://cdn.ampproject.org/v0/amp-list-0.1.js'},{'element':'amp-carousel','src':'https://cdn.ampproject.org/v0/amp-carousel-0.1.js'}]
 	- var baseUrl = 'https://iprice.hk'
 	- var topWording = 'Search, Compare & Save'
 	- var og_image = 'https://bilhasry-iprice.github.io/sale/data/hk/image/1111-sale.jpg'
 	- var published_date = new Date('2017-11-01')
-	- var description = 'Single\'s Day sales is here! Get all your favourite products on discounts!'
+	- var description = 'The Much-Awaited Biggest 11.11 Sale Hong Kong is back Exclusive Online Revolution Promo Codes, Vouchers from Lazada, Agoda, Zalora, Uber, Grab. Get Huge Discounts on #1111Sale'
 	- var image = 'https://bilhasry-iprice.github.io/sale/data/hk/image/1111-sale.jpg'
 	- var lang = 'en'
 	- var mustache = 'true'
 	- var homeUrl = baseUrl + '/sale/1111/'
+	- var country_code			= 'hk'
 
 block content
 	- var d1 					= new Date()
 	- var published_date 		= d1.toDateString() 
-	- var main_banner_desktop 	= 'https://bilhasry-iprice.github.io/sale/data/hk/image/main-banner.jpg'
-	- var main_banner_mobile 	= 'https://bilhasry-iprice.github.io/sale/data/hk/image/main_banner_mobile.jpg'
+	- var main_banner_desktop 	= ''
+	- var main_banner_mobile 	= ''
 	- var d2 					= new Date()
 	- var today 				= d2.toDateString()
+	- var mainTitle				= 'The Great 11.11 Sale is here!'
 	- var tagline 				= 'Get ready to do all your year\'s shopping starting from 1st November 2017. Known as Singles\' Day, 11-11 is a day created for those who would rather shop online than do anything else. '
-	- var brandTagline			= '11.11 Top Exclusive Offers'
-	- var couponTagline 		= 'That\'s it? No, we give you more than you ever wanted!<br />More best coupons and vouchers'
+	- var brandTagline			= 'Only the Best 11.11 Offers!'
+	- var brandDescription 		= 'Enjoy exclusive offers handpicked for you. With huge discounts and savings on products and services, you can do all your shopping, plus travel purchases and more! '
+	- var couponTagline 		= '11.11 Exclusive Coupons'
+	- var couponDescription 	= 'We know discounts on your favourite products aren\'t enough,<br />so here you go. Exclusive 11.11 Coupons to sweeten the deal.'
+	- var topBrandTitle			= 'Top Brands'
+	- var subscribeCopy			= '<p>Can\'t find the right deals? No worries.<br />Sign up with us and we’ll send you more!</p>'
+	- var mailchimp				= '9e3db8ad29'
+	- var subcribeMessage		= 'Thanks for subscribe your email address'
 	- var country_code			= 'hk'
+	- var country				= 'Hong Kong\'s'
+	- var topMerchantTitle		= 'Top Merchants'
+	- var couponCTA				= 'Reveal The Code'
+	- var couponDirect			= 'Get This Deal'
 
 block footer
+	- var country_code			= 'hk'
 	- var urls = [{'class':'singapore','link':'https://iprice.sg','title':'Singapore'},{'class':'malaysia','link':'https://iprice.my','title':'Malaysia'},{'class':'indonesia','link':'https://iprice.co.id','title':'Indonesia'},{'class':'philippines','link':'https://iprice.ph','title':'Philippines'},{'class':'thailand','link':'https://ipricethailand.com','title':'Thailand'},{'class':'vietnam','link':'https://iprice.vn','title':'Vietnam'}]
 	- var groups = [{'class':'about-us','link':'http://ipricegroup.com/','title':'About Us'},{'class':'trends','link':'https://iprice.hk/trends/','title':'Trends'},{'class':'contact-us','link':'http://ipricegroup.com/contact.html','title':'Contact Us'},{'class':'careers','link':'http://ipricegroup.com/career.html','title':'Careers'},{'class':'partners','link':'http://ipricegroup.com/partner.html','title':'Partners'},{'class':'privacy','link':'https://iprice.hk/privacy-policy/','title':'Privacy Policy'},{'class':'terms-of-use','link':'https://iprice.hk/terms-of-use/','title':'Terms of Use'},{'class':'iema','link':'https://iprice.hk/iema/2016/','title':'iEMA'}]
 	- var socials = [{'class':'facebook','link':'https://www.facebook.com/ipriceHongKong','title':'Facebook'},{'class':'pinterest','link':'https://www.pinterest.com/ipricehk','title':'Pinterest'},{'class':'twitter','link':'https://twitter.com/iPriceHK','title':'Twitter'},{'class':'google-plus','link':'http://plus.google.com/+Ipricegroup/about','title':'Google+'}]

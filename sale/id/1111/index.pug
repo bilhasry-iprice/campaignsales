@@ -1,16 +1,17 @@
 extends ../../../page.1111.pug
 block header
-	- var pageTitle = 'Enjoy 11.11 Sale Indonesia - Exclusive 1111 Promo Codes & Vouchers'
+	- var pageTitle = '11.11 Sale Indonesia - Eksklusif 1111 Kupon Promo & Vouchers'
 	- var plugins = [{'element':'amp-form','src':'https://cdn.ampproject.org/v0/amp-form-0.1.js'},{'element':'amp-list','src':'https://cdn.ampproject.org/v0/amp-list-0.1.js'},{'element':'amp-carousel','src':'https://cdn.ampproject.org/v0/amp-carousel-0.1.js'}]
 	- var baseUrl = 'https://iprice.co.id'
 	- var topWording = 'Search, Compare & Save'
 	- var og_image = 'https://bilhasry-iprice.github.io/sale/data/id/image/1111-sale.jpg'
 	- var published_date = new Date('2017-11-01')
-	- var description = 'The Much-Awaited Biggest 11.11 Sale Philippines is back Exclusive Online Revolution Promo Codes, Vouchers from Lazada, Althea, Zalora, Uber, Grab. Get Huge Discounts on #1111Sale'
+	- var description = 'The Much-Awaited Biggest 11.11 Sale Indonesia is back Exclusive Online Revolution Promo Codes, Vouchers from Lazada, shopee, Zalora, Uber, Grab. Get Huge Discounts on #1111Sale'
 	- var image = 'https://bilhasry-iprice.github.io/sale/data/id/image/1111-sale.jpg'
 	- var lang = 'en'
 	- var mustache = 'true'
 	- var homeUrl = baseUrl + '/sale/1111/'
+	- var country_code			= 'id'
 
 block content
 	- var d1 					= new Date()
@@ -19,15 +20,25 @@ block content
 	- var main_banner_mobile 	= 'https://bilhasry-iprice.github.io/sale/data/id/image/bukalapak_mobile.png?raw=true'
 	- var d2 					= new Date()
 	- var today 				= d2.toDateString()
+	- var mainTitle				= '11.11 Sale'
 	- var tagline 				= 'Ada alasan mengapa tanggal 11-11 disebut dengan Singles\' Day. Hari ini dibuat khusus untuk mereka yang memilih belanja online dibanding melakukan hal lainnya. Siapkan diri Anda untuk menikmati sale gede-gedean yang akan dimulai dari tanggal 1 November 2017 ini.'
 	- var brandTagline			= 'Lihat Penawaran Eksklusif 11.11 Kami'
 	- var brandDescription		= 'Tidak ada yang lebih menggiurkan daripada penawaran ekslusif. Di sini Anda bisa mendapatkan berbagai macam diskon-diskon yang tidak ada di tempat lain!'
 	- var cta = 'Klik banner ini untuk menikmati promo dan diskon belanja.'
-	- var couponTagline 		= 'Kupon-kupon Eksklusif 11.11 Lainnya'
+	- var couponTagline 		= 'Kupon-Kupon Eksklusif 11.11 Lainnya'
 	- var couponDescription 	= 'Masih belum puas? Intip kupon-kupon dan penawaran lainnya di bawah ini. Selamat belanja sepuasnya!'
+	- var topBrandTitle			= 'Brand Terbaik'
 	- var country_code			= 'id'
+	- var subscribeCopy			= '<p>Tidak menemukan diskon yang kamu inginkan?<br />Segera bergabung untuk banyak penawaran menarik lainnya!</p>'
+	- var mailchimp				= '8bd51046c3'
+	- var subscribeCTA			= 'Saya Tertarik'
+	- var subcribeMessage		= 'Thanks for subscribe your email address'
+	- var topMerchantTitle		= 'Merchant Terbaik'
+	- var couponCTA				= 'Dapatkan Kode Kupon'
+	- var couponDirect			= 'Dapatkan Penawaran'
 
 block footer
+	- var country_code			= 'id'
 	- var urls = [{'class':'singapore','link':'https://iprice.sg','title':'Singapore'},{'class':'malaysia','link':'https://iprice.co.my','title':'Malaysia'},{'class':'philippines','link':'https://iprice.ph','title':'Philippines'},{'class':'hong-kong','link':'https://iprice.hk','title':'Hong Kong'},{'class':'thailand','link':'https://ipricethailand.com','title':'Thailand'},{'class':'vietnam','link':'https://iprice.vn','title':'Vietnam'}]
 	- var groups = [{'class':'about-us','link':'http://ipricegroup.com/','title':'Tentang Kami'},{'class':'trends','link':'https://iprice.co.id/trends/','title':'Trend'},{'class':'contact-us','link':'http://ipricegroup.com/contact.html','title':'Hubungi Kami'},{'class':'careers','link':'http://ipricegroup.com/career.html','title':'Karir'},{'class':'partners','link':'http://ipricegroup.com/partner.html','title':'Mitra'},{'class':'privacy','link':'https://iprice.co.id/privacy-policy/','title':'Kebijakan Privasi'},{'class':'terms-of-use','link':'https://iprice.co.id/terms-of-use/','title':'Syarat & Ketentuan'},{'class':'iema','link':'https://iprice.co.id/iema/2016/','title':'iEMA'}]
 	- var socials = [{'class':'facebook','link':'https://www.facebook.com/ipriceIndonesia','title':'Facebook'},{'class':'pinterest','link':'https://www.pinterest.com/ipriceid','title':'Pinterest'},{'class':'twitter','link':'https://twitter.com/iPriceID','title':'Twitter'},{'class':'google-plus','link':'http://plus.google.com/+Ipricegroup/about','title':'Google+'}]

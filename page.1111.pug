@@ -13,6 +13,7 @@ html(amp, lang="en")
     link(rel="shortcut icon", href="https://d1vfs9f7h1rfk4.cloudfront.net/favicon.ico?v=1")
     link(href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700", rel="stylesheet")
     meta(name="viewport", content="width=device-width,minimum-scale=1,initial-scale=1")
+    meta(name="theme-color", content="#33cccc")
     // Open Graph Meta for Facebook
     meta(property="og:url", content=baseUrl+'/sale/1111/')
     meta(property="og:type", content="website")
@@ -36,14 +37,29 @@ html(amp, lang="en")
         include sale/template/main_template/css/main.campaign.css
         include sale/template/main_template/css/iprice.min.css
   body
-    include sale/template/main_template/header_iprice.pug
+    if ( country_code == 'id')
+        include sale/template/main_template/header_iprice.id.pug
+    else if ( country_code == 'th')
+        include sale/template/main_template/header_iprice.th.pug
+    else
+        include sale/template/main_template/header_iprice.pug
     #main-content.width-100
         block content
         if (published_date < today)
             include sale/template/main_template/pre_campaign.1111.pug
-            include sale/template/main_template/seo_content.1111.pug
         else if (published_date == today)
-            include sale/template/main_template/main_content.1111.pug
+            include sale/template/main_template/main_content.release.1111.pug
+        if ( country_code == 'id')
+            include sale/template/main_template/seo_content.1111.id.pug
+        else if ( country_code == 'th')
+            include sale/template/main_template/seo_content.1111.th.pug
+        else
             include sale/template/main_template/seo_content.1111.pug
     block footer
-    include sale/template/main_template/footer_iprice.pug
+    if ( country_code == 'id')
+        include sale/template/main_template/footer_iprice.id.pug
+    else if ( country_code == 'th')
+        include sale/template/main_template/footer_iprice.th.pug
+    else
+        include sale/template/main_template/footer_iprice.pug
+    
