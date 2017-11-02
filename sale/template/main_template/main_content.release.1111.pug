@@ -9,7 +9,7 @@ else
 	
 #brand-top
 	.top-selling-products.content-block
-		amp-list(width="auto", height="165", layout="fixed-height", src="https://bilhasry-iprice.github.io/sale/data/"+country_code+"/1111/data_product.json")
+		amp-list(width="auto", height="165", layout="fixed-height", src="data/data_product.json")
 			template(type="amp-mustache")
 				amp-carousel(height="165", width="auto",  layout="fixed-height", type="carousel")
 					|{{#values}}{{#img}}<a href="{{url}}" class="effect1 top-product-list"><amp-img src="{{img}}" alt="{{title}}" width="16" height="9" layout="responsive"></amp-img></a>{{/img}}{{/values}}
@@ -23,12 +23,12 @@ else
 	h2 !{brandTagline}
 	p !{brandDescription}
 	.brand-carousel.content-block
-		amp-list(media="(max-width: 649px)",width="auto", height="224", layout="fixed-height", src="https://bilhasry-iprice.github.io/sale/data/"+country_code+"/1111/data_brands.json")
+		amp-list(media="(max-width: 649px)",width="auto", height="224", layout="fixed-height", src="data/data_brands.json")
 			template(type="amp-mustache")
 				amp-carousel(height="224", width="auto",  layout="fixed-height", type="slides", autoplay, delay="3000")
 					|{{#values}}{{#img}}<div class="brand-item"><a href="{{url}}"><amp-img src="{{img}}" alt="{{title}}" width="25" height="12" layout="responsive"></amp-img>{{#default}}<span class="description">{{description}}</span><span class="cta">{{cta}}</span>{{/default}}</a></div>{{/img}}{{/values}}
 	.brand-list.row.content-block 
-		amp-list(media="(min-width: 650px)",width="auto", height="256", layout="fixed-height", src="https://bilhasry-iprice.github.io/sale/data/"+country_code+"/1111/data_brands.json")
+		amp-list(media="(min-width: 650px)",width="auto", height="256", layout="fixed-height", src="data/data_brands.json")
 			template(type="amp-mustache")
 				|{{#values}}{{#img}}
 				.brand-item.col-md-6
@@ -42,11 +42,11 @@ else
 #top-brand-list
 	.content-block.top-brand-list.row
 		strong !{topBrandTitle}
-		amp-list(media="(max-width: 767px)",width="auto", height="172", layout="fixed-height", src="https://bilhasry-iprice.github.io/sale/data/"+country_code+"/1111/data-top_brand.json")
+		amp-list(media="(max-width: 767px)",width="auto", height="172", layout="fixed-height", src="data/data-top_brand.json")
 			template(type="amp-mustache")
 				amp-carousel(height="172", width="auto",  layout="fixed-height", type="carousel")
 					|{{#values}}{{#img}}<div class="brand-item"><a href="{{url}}" class="top-product-list"><amp-img src="{{img}}" width="128" height="128" layout="responsive"></amp-img></a><span class="title">{{title}}</span></div>{{/img}}{{/values}}
-		amp-list(media="(min-width: 768px)",width="auto", height="180", layout="fixed-height", src="https://bilhasry-iprice.github.io/sale/data/"+country_code+"/1111/data-top_brand.json")
+		amp-list(media="(min-width: 768px)",width="auto", height="180", layout="fixed-height", src="data/data-top_brand.json")
 			template(type="amp-mustache")
 				|{{#values}}{{#img}}
 				.brand-item.col-md-2
@@ -58,7 +58,7 @@ else
 	h2 !{couponTagline}
 	p !{couponDescription}
 	.coupon-list-wrapper.content-block
-		amp-list(width="auto", height="280", layout="fixed-height", src="https://bilhasry-iprice.github.io/sale/data/"+country_code+"/1111/data_coupons.json")
+		amp-list(width="auto", height="280", layout="fixed-height", src="data/data_coupons.json")
 			template(type="amp-mustache")
 				.coupon-item.col-md-3
 					a(href="{{url}}", target="_blank")
@@ -71,11 +71,11 @@ else
 #top-store-list
 	.content-block.top-store-list
 		strong !{topMerchantTitle}
-		amp-list(media="(max-width: 767px)",width="auto", height="110", layout="fixed-height", src="https://bilhasry-iprice.github.io/sale/data/"+country_code+"/1111/data-top_stores.json")
+		amp-list(media="(max-width: 767px)",width="auto", height="110", layout="fixed-height", src="data/data-top_stores.json")
 			template(type="amp-mustache")
 				amp-carousel(height="110", width="auto",  layout="fixed-height", type="carousel")
 					|{{#values}}{{#img}}<div class="brand-item"><a href="{{url}}" class="top-product-list"><amp-img src="{{img}}" width="150" height="75" layout="responsive"></amp-img><span class="title">{{title}}</span></a></div>{{/img}}{{/values}}
-		amp-list(media="(min-width: 768px)",width="auto", height="172", layout="fixed-height", src="https://bilhasry-iprice.github.io/sale/data/"+country_code+"/1111/data-top_stores.json")
+		amp-list(media="(min-width: 768px)",width="auto", height="172", layout="fixed-height", src="data/data-top_stores.json")
 			template(type="amp-mustache")
 				amp-carousel(height="172", width="auto",  layout="fixed-height", type="carousel")
 					|{{#values}}{{#img}}<div class="brand-item"><a href="{{url}}" class="top-product-list"><amp-img src="{{img}}" width="150" height="75" layout="responsive"></amp-img><span class="title">{{title}}</span></a></div>{{/img}}{{/values}}

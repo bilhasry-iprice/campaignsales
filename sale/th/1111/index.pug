@@ -1,26 +1,43 @@
 extends ../../../page.1111.pug
 block header
-	- var pageTitle = 'โปรแรงแห่งปีที่คุณไม่ควรพลาด 11/11'
-	- var plugins = [{'element':'amp-form','src':'https://cdn.ampproject.org/v0/amp-form-0.1.js'},{'element':'amp-iframe','src':'https://cdn.ampproject.org/v0/amp-iframe-0.1.js'},{'element':'amp-list','src':'https://cdn.ampproject.org/v0/amp-list-0.1.js'},{'element':'amp-carousel','src':'https://cdn.ampproject.org/v0/amp-carousel-0.1.js'}]
+	- var pageTitle = 'ช้อปสนุก 11.11 Sale Thailand - พิเศษ 1111 โปรโมชั่นโค้ด & วอชเชอร์'
+	- var plugins = [{'element':'amp-form','src':'https://cdn.ampproject.org/v0/amp-form-0.1.js'},{'element':'amp-list','src':'https://cdn.ampproject.org/v0/amp-list-0.1.js'},{'element':'amp-carousel','src':'https://cdn.ampproject.org/v0/amp-carousel-0.1.js'}]
 	- var baseUrl = 'https://ipricethailand.com'
-	- var topWording = 'ค้นหา เช็คราคา ที่เดียวครบสุดคุ้ม'
+	- var topWording = 'Search, Compare & Save'
 	- var og_image = 'https://bilhasry-iprice.github.io/sale/data/th/image/1111-sale.jpg'
-	- var published_date = new Date('2017-10-01')
-	- var description = '11/11 โปรแรงวันคนโสด ลดราคากระหน่ำมากกว่าใครด้วยสินค้าหลายรายการจากแบรนด์ดัง ให้คุณช้อปคุ้มที่สุดในรอบปี ไม่ว่าจะเป็นเสื้อผ้าแฟชั่น รองเท้า เครื่องใช้ไฟฟ้า โทรศัพท์มือถือ สินค้าอิเล็กทรอนิกส์ หรือสินค้าประเภทไหน ๆ ก็ลดจริงลดแรงแซงใครในจักรวาลแน่นอน!'
+	- var published_date = new Date('2017-11-01')
+	- var description = 'The Much-Awaited Biggest 11.11 Sale Thailand is back Exclusive Online Revolution Promo Codes, Vouchers from Lazada, Central, Shopee, Uber, Grab. Get Huge Discounts on #1111Sale'
 	- var image = 'https://bilhasry-iprice.github.io/sale/data/th/image/1111-sale.jpg'
-	- var lang = 'th'
+	- var lang = 'en'
 	- var mustache = 'true'
 	- var homeUrl = baseUrl + '/sale/1111/'
+	- var country_code			= 'th'
 
 block content
-	- var d1 					= new Date('2017-10-09')
+	- var d1 					= new Date()
 	- var published_date 		= d1.toDateString() 
+	- var main_banner_desktop 	= ''
+	- var main_banner_mobile 	= ''
 	- var d2 					= new Date()
 	- var today 				= d2.toDateString()
-	- var code = 'th'
-	- var mailchimp = '9e0bb6c514'
+	- var mainTitle				= '11.11 Sale'
+	- var tagline 				= 'ช้อปสนุกกับ 11.11 Sale: เตรียมตัวให้พร้อมกับเซลต้อนรับวันคนโสด วันที่ 11 เดือน 11 และโปรโมชั่นลดแรงที่สุดแห่งปี เริ่มตั้งแต่ 1 พ.ย. 2560 นี้เป็นต้นไป เอาใจขาช้อปออนไลน์ให้ซื้อของในราคาถูกมากกว่าใครที่นี่'
+	- var topBrandTitle			= 'แบรนด์ยอดนิยม'
+	- var brandTagline			= 'โปรโมชั่นสุดพิเศษสำหรับ 11.11 Sale'
+	- var brandDescription 		= 'ช้อปเพลินด้วยโปรโมชั่น ส่วนลด คูปอง และข้อเสนอมากมายที่ถูกคัดสรรมาเพื่อคุณ ไม่ว่าจะเป็นสินค้าหรือบริการไหน ๆ ก็ช้อปสนุกกันแบบเต็มอิ่มที่นี่!'
+	- var couponTagline 		= 'คูปองสุดพิเศษ 11.11'
+	- var couponDescription 	= 'นอกจากโปรโมชั่นสุดพิเศษแล้ว เรายังมีคูปองที่คุ้มที่สุดพร้อมVoucher ที่ดีที่สุดมาให้ช้อปกันแบบกระจาย! ไม่ว่าจะช้อปสินค้า หาที่พัก จองตั๋วเครื่องบิน หรือบริการไหน ๆ ก็ถูกกว่าใครแน่นอน!'
+	- var subscribeCopy			= '<p>ยังไม่เจอดีลโดนใจใช่ไหม<br />ลงทะเบียนกับเราเพื่อรับสิทธิพิเศษมากมายได้เลย!</p>'
+	- var mailchimp				= '9e0bb6c514'
+	- var subscribeCTA			= 'กดติดตามที่นี่'
+	- var subcribeMessage		= 'ตรวจสอบอีเมล เพลิดเพลิน กับดีล'
+	- var country_code			= 'th'
+	- var topMerchantTitle		= 'ร้านค้ายอดนิยม'
+	- var couponCTA				= 'รับโค้ดคูปอง'
+	- var couponDirect			= 'กดเพื่อรับ Deal'
 
 block footer
+	- var country_code			= 'th'
 	- var urls = [{'class':'singapore','link':'https://iprice.sg','title':'Singapore'},{'class':'malaysia','link':'https://iprice.my','title':'Malaysia'},{'class':'indonesia','link':'https://iprice.co.id','title':'Indonesia'},{'class':'philippines','link':'https://iprice.ph','title':'Philippines'},{'class':'thailand','link':'https://ipricethailand.com','title':'Thailand'},{'class':'vietnam','link':'https://iprice.vn','title':'Vietnam'}]
-	- var groups = [{'class':'about-us','link':'http://ipricegroup.com/','title':'About Us'},{'class':'trends','link':'https://iprice.ph/trends/','title':'Trends'},{'class':'contact-us','link':'http://ipricegroup.com/contact.html','title':'Contact Us'},{'class':'careers','link':'http://ipricegroup.com/career.html','title':'Careers'},{'class':'partners','link':'http://ipricegroup.com/partner.html','title':'Partners'},{'class':'privacy','link':'https://iprice.ph/privacy-policy/','title':'Privacy Policy'},{'class':'terms-of-use','link':'https://iprice.ph/terms-of-use/','title':'Terms of Use'},{'class':'iema','link':'https://iprice.ph/iema/2016/','title':'Vietnam'}]
+	- var groups = [{'class':'about-us','link':'http://ipricegroup.com/','title':'About Us'},{'class':'trends','link':'https://ipricethailand.com/trends/','title':'Trends'},{'class':'contact-us','link':'http://ipricegroup.com/contact.html','title':'Contact Us'},{'class':'careers','link':'http://ipricegroup.com/career.html','title':'Careers'},{'class':'partners','link':'http://ipricegroup.com/partner.html','title':'Partners'},{'class':'privacy','link':'https://ipricethailand.com/privacy-policy/','title':'Privacy Policy'},{'class':'terms-of-use','link':'https://ipricethailand.com/terms-of-use/','title':'Terms of Use'},{'class':'iema','link':'https://ipricethailand.com/iema/2016/','title':'iEMA'}]
 	- var socials = [{'class':'facebook','link':'https://www.facebook.com/ipriceMalaysia','title':'Facebook'},{'class':'pinterest','link':'https://www.pinterest.com/ipricemy','title':'Pinterest'},{'class':'twitter','link':'https://twitter.com/iPriceMY','title':'Twitter'},{'class':'google-plus','link':'http://plus.google.com/+Ipricegroup/about','title':'Google+'}]

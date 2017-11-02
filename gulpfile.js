@@ -48,64 +48,70 @@ var sass = require('gulp-sass');
 // gulp.task('default', [ 'hk', 'id', 'my', 'ph', 'th', 'sg']);
 
 
-gulp.task('sass', function () {
-  return gulp.src('./sale/template/main_template/css/main.campaign.scss')
-    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-    .pipe(gulp.dest('./sale/template/main_template/css/'));
-});
-
-gulp.task('hk', ['sass'], function(){
-  return gulp.src('./sale/hk/1111/index.pug')
-    .pipe(pug())
-    .pipe(gulp.dest('./sale/hk/1111/'))
-});
-
-gulp.task('my', ['sass'], function(){
-  return gulp.src('./sale/my/1111/index.pug')
-    .pipe(pug())
-    .pipe(gulp.dest('./sale/my/1111/'))
-});
-
-gulp.task('ph', ['sass'], function(){
-  return gulp.src('./sale/ph/1111/index.pug')
-    .pipe(pug())
-    .pipe(gulp.dest('./sale/ph/1111/'))
-});
-
-gulp.task('sg', ['sass'], function(){
-  return gulp.src('./sale/sg/1111/index.pug')
-    .pipe(pug())
-    .pipe(gulp.dest('./sale/sg/1111/'))
-});
-
-gulp.task('id', ['sass'], function(){
-  return gulp.src('./sale/id/1111/index.pug')
-    .pipe(pug())
-    .pipe(gulp.dest('./sale/id/1111/'))
-});
-
 // gulp.task('sass', function () {
-//   return gulp.src('./sale/template/main_template/css/blackfriday.main.scss')
+//   return gulp.src('./sale/template/main_template/css/main.campaign.scss')
 //     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
 //     .pipe(gulp.dest('./sale/template/main_template/css/'));
 // });
 
 // gulp.task('hk', ['sass'], function(){
-//   return gulp.src('./sale/hk/blackfriday/index.pug')
+//   return gulp.src('./sale/hk/1111/index.pug')
 //     .pipe(pug())
-//     .pipe(gulp.dest('./sale/hk/blackfriday/'))
-// });
-
-// gulp.task('sg', ['sass'], function(){
-//   return gulp.src('./sale/sg/blackfriday/index.pug')
-//     .pipe(pug())
-//     .pipe(gulp.dest('./sale/sg/blackfriday/'))
+//     .pipe(gulp.dest('./sale/hk/1111/'))
 // });
 
 // gulp.task('my', ['sass'], function(){
-//   return gulp.src('./sale/my/blackfriday/index.pug')
+//   return gulp.src('./sale/my/1111/index.pug')
 //     .pipe(pug())
-//     .pipe(gulp.dest('./sale/my/blackfriday/'))
+//     .pipe(gulp.dest('./sale/my/1111/'))
 // });
 
-gulp.task('default', [ 'hk', 'my', 'ph', 'sg', 'id']);
+// gulp.task('ph', ['sass'], function(){
+//   return gulp.src('./sale/ph/1111/index.pug')
+//     .pipe(pug())
+//     .pipe(gulp.dest('./sale/ph/1111/'))
+// });
+
+// gulp.task('sg', ['sass'], function(){
+//   return gulp.src('./sale/sg/1111/index.pug')
+//     .pipe(pug())
+//     .pipe(gulp.dest('./sale/sg/1111/'))
+// });
+
+// gulp.task('id', ['sass'], function(){
+//   return gulp.src('./sale/id/1111/index.pug')
+//     .pipe(pug())
+//     .pipe(gulp.dest('./sale/id/1111/'))
+// });
+
+// gulp.task('th', ['sass'], function(){
+//   return gulp.src('./sale/th/1111/index.pug')
+//     .pipe(pug())
+//     .pipe(gulp.dest('./sale/th/1111/'))
+// });
+
+gulp.task('sass', function () {
+  return gulp.src('./sale/template/main_template/css/blackfriday.main.scss')
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(gulp.dest('./sale/template/main_template/css/'));
+});
+
+gulp.task('hk', ['sass'], function(){
+  return gulp.src('./sale/hk/blackfriday/index.pug')
+    .pipe(pug())
+    .pipe(gulp.dest('./sale/hk/blackfriday/'))
+});
+
+gulp.task('sg', ['sass'], function(){
+  return gulp.src('./sale/sg/blackfriday/index.pug')
+    .pipe(pug())
+    .pipe(gulp.dest('./sale/sg/blackfriday/'))
+});
+
+gulp.task('my', ['sass'], function(){
+  return gulp.src('./sale/my/blackfriday/index.pug')
+    .pipe(pug())
+    .pipe(gulp.dest('./sale/my/blackfriday/'))
+});
+
+gulp.task('default', [ 'hk', 'my', 'sg']);
