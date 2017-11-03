@@ -13,10 +13,10 @@ body{
 
 @font-face {
 	font-family: 'Circular Std';
-	src: url('./assets/fonts/CircularStd-Bold.eot');
-	src: url('./assets/fonts/CircularStd-Bold.eot?#iefix') format('embedded-opentype'),
-		url('./assets/fonts/CircularStd-Bold.woff') format('woff'),
-		url('./assets/fonts/CircularStd-Bold.ttf') format('truetype');
+	src: url('../assets/fonts/CircularStd-Bold.eot');
+	src: url('../assets/fonts/CircularStd-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../assets/fonts/CircularStd-Bold.woff') format('woff'),
+		url('../assets/fonts/CircularStd-Bold.ttf') format('truetype');
 	font-weight: bold;
 	font-style: normal;
 }
@@ -275,7 +275,7 @@ p, ul li, li{
 		    padding: 0px 15px;
 		    h1 {
 			    padding: 50px 0px 0px 0px;
-			    font-size: 56px;
+			    font-size: 40px;
 			}
 			h2{
 				font-size: 16px;
@@ -379,6 +379,9 @@ div#big-slider amp-carousel{
     div#big-slider amp-carousel{
         min-height:203px;
     }
+    #banner .wrapper form input[type="text"]{
+	    font-size:14px;
+	}
 }
 
 #main-content{
@@ -656,5 +659,7 @@ div#big-slider amp-carousel{
 		}
 	}
 }
+
+div#rendered-message-amp-form-1{margin-top:10px;text-align:center;font-size:12px;display:block;color:#fff}
 
 

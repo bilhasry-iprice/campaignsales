@@ -1,18 +1,20 @@
 extends ../../../page.blackfriday.pug
 block header
 	- var pageTitle = 'BlackFriday 2017 Sale Deals, Promo Codes & Vouchers - Hong Kong'
-	- var plugins = [{'element':'amp-form','src':'https://cdn.ampproject.org/v0/amp-form-0.1.js'},{'element':'amp-iframe','src':'https://cdn.ampproject.org/v0/amp-iframe-0.1.js'},{'element':'amp-list','src':'https://cdn.ampproject.org/v0/amp-list-0.1.js'},{'element':'amp-carousel','src':'https://cdn.ampproject.org/v0/amp-carousel-0.1.js'}]
+	- var plugins = [{'element':'amp-form','src':'https://cdn.ampproject.org/v0/amp-form-0.1.js'},{'element':'amp-iframe','src':'https://cdn.ampproject.org/v0/amp-iframe-0.1.js'},{'element':'amp-list','src':'https://cdn.ampproject.org/v0/amp-list-0.1.js'},{'element':'amp-analytics','src':'https://cdn.ampproject.org/v0/amp-analytics-0.1.js'},{'element':'amp-carousel','src':'https://cdn.ampproject.org/v0/amp-carousel-0.1.js'}]
 	- var baseUrl = 'https://iprice.hk'
 	- var topWording = 'Search, Compare & Save'
-	- var og_image = 'https://bilhasry-iprice.github.io/sale/data/my/image/1111-sale.jpg'
+	- var og_image = 'assets/image/blackfriday-fb.jpg'
 	- var published_date = new Date('2017-11-03')
 	- var description = 'Enjoy the Biggest BlackFriday 2017 Sale in Hong Kong is back with Exclusive Black Friday Deals, Promo Codes, Vouchers from Lazada, Agoda, Zalora, Uber, Grab and more.'
-	- var image = 'https://bilhasry-iprice.github.io/sale/data/my/image/1111-sale.jpg'
+	- var image = 'assets/image/blackfriday-fb.jpg'
 	- var lang = 'en'
 	- var mustache = 'true'
 	- var homeUrl = baseUrl + '/sale/blackfriday/'
+	- var trackingID = 'UA-43455980-1'
 
 block content
+	
 	- var mainTitle = 'Black Friday 2017'
 	- var subTitle = 'Enjoy the Biggest Black Friday Sale in Hong Kong'
 	- var subscribeWording = 'A sale is coming, brace yourself! <br />Don’t be left out in the cold, let us keep you warm with hot coupons and deals.'
@@ -27,3 +29,4 @@ block footer
 	- var urls = [{'class':'singapore','link':'https://iprice.sg','title':'Singapore'},{'class':'malaysia','link':'https://iprice.my','title':'Malaysia'},{'class':'indonesia','link':'https://iprice.co.id','title':'Indonesia'},{'class':'philippines','link':'https://iprice.ph','title':'Singapore'},{'class':'thailand','link':'https://ipricethailand.com','title':'Thailand'},{'class':'vietnam','link':'https://iprice.vn','title':'Vietnam'}]
 	- var groups = [{'class':'about-us','link':'http://ipricegroup.com/','title':'About Us'},{'class':'trends','link':'https://iprice.hk/trends/','title':'Trends'},{'class':'contact-us','link':'http://ipricegroup.com/contact.html','title':'Contact Us'},{'class':'careers','link':'http://ipricegroup.com/career.html','title':'Careers'},{'class':'partners','link':'http://ipricegroup.com/partner.html','title':'Partners'},{'class':'privacy','link':'https://iprice.hk/privacy-policy/','title':'Privacy Policy'},{'class':'terms-of-use','link':'https://iprice.hk/terms-of-use/','title':'Terms of Use'},{'class':'iema','link':'https://iprice.hk/iema/2016/','title':'iEMA'}]
 	- var socials = [{'class':'facebook','link':'https://www.facebook.com/ipriceHongKong','title':'Facebook'},{'class':'pinterest','link':'https://www.pinterest.com/ipricehk','title':'Pinterest'},{'class':'twitter','link':'https://twitter.com/iPriceHK','title':'Twitter'},{'class':'google-plus','link':'http://plus.google.com/+Ipricegroup/about','title':'Google+'}]
+	- var top_store = '<div class="top-coupon-stores"> <h3>Top Stores</h3><ul> <li> <a href="https://iprice.hk/coupons/zalora/"> Zalora </a> </li> <li> <a href="https://iprice.hk/coupons/uber/"> Uber </a> </li> <li> <a href="https://iprice.hk/coupons/agoda/"> Agoda </a> </li> <li> <a href="https://iprice.hk/coupons/axa-travel-insurance/"> Axa Travel Insurance </a> </li> <li> <a href="https://iprice.hk/coupons/ctrip/"> Ctrip </a> </li> <li> <a href="https://iprice.hk/coupons/iherb/"> Iherb </a> </li> <li> <a href="https://iprice.hk/coupons/zuji/"> Zuji </a> </li> <li> <a href="https://iprice.hk/coupons/bookingcom/"> Booking.com </a> </li> </ul> </div>'
